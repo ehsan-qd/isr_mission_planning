@@ -1,0 +1,3949 @@
+{
+  "job_id": "medium_seed_101_assignment_geographic_v2_qubo",
+  "scenario_id": "medium_seed_101",
+  "scale": "medium",
+  "seed": 101,
+  "tasks": 75,
+  "uavs": 15,
+  "variables": 559,
+  "nonzeros": 27509,
+  "matrix_file": "mtx/medium_seed_101_assignment_geographic_v2_qubo.mtx",
+  "metadata_file": "medium_seed_101_assignment_geographic_v2_qubo.json",
+  "matrix_sha256": "f622762b54baa88247c786f7537134536355de573c5d00422cebfd0b4b80de16",
+  "scenario_sha256": "3c536831c8bcbdd81931ed49663fda989bba35c2640aa428e8a18f1a66582c63",
+  "encoding_seconds": 0.005452457990031689,
+  "schema_version": 1,
+  "formulation": {
+    "assignment_penalty": 12.0,
+    "base_weight": 0.75,
+    "cluster_weight": 0.25,
+    "workload_weight": 1.5,
+    "travel_burden_factor": 1.0,
+    "cluster_distance_cap": 1.0,
+    "formulation_name": "assignment_geographic_v2",
+    "formulation_version": "2.1"
+  },
+  "scenario_file": "scenarios/medium_seed_101.json",
+  "matrix_format": "MatrixMarket matrix coordinate real general",
+  "matrix_storage": "full symmetric; off-diagonal upper-Q coefficients divided by two",
+  "energy_convention": "minimize E(x) = x^T Q x, x in {0,1}^n",
+  "constant_offset": 0.0,
+  "coefficient_scale": 1.0,
+  "variable_order": [
+    "assign::UAV_01::TASK_001",
+    "assign::UAV_04::TASK_001",
+    "assign::UAV_06::TASK_001",
+    "assign::UAV_07::TASK_001",
+    "assign::UAV_08::TASK_001",
+    "assign::UAV_09::TASK_001",
+    "assign::UAV_11::TASK_001",
+    "assign::UAV_12::TASK_001",
+    "assign::UAV_13::TASK_001",
+    "assign::UAV_14::TASK_001",
+    "assign::UAV_15::TASK_001",
+    "assign::UAV_01::TASK_002",
+    "assign::UAV_04::TASK_002",
+    "assign::UAV_06::TASK_002",
+    "assign::UAV_07::TASK_002",
+    "assign::UAV_08::TASK_002",
+    "assign::UAV_09::TASK_002",
+    "assign::UAV_11::TASK_002",
+    "assign::UAV_12::TASK_002",
+    "assign::UAV_13::TASK_002",
+    "assign::UAV_14::TASK_002",
+    "assign::UAV_15::TASK_002",
+    "assign::UAV_01::TASK_003",
+    "assign::UAV_04::TASK_003",
+    "assign::UAV_06::TASK_003",
+    "assign::UAV_07::TASK_003",
+    "assign::UAV_08::TASK_003",
+    "assign::UAV_09::TASK_003",
+    "assign::UAV_11::TASK_003",
+    "assign::UAV_12::TASK_003",
+    "assign::UAV_13::TASK_003",
+    "assign::UAV_14::TASK_003",
+    "assign::UAV_15::TASK_003",
+    "assign::UAV_03::TASK_004",
+    "assign::UAV_06::TASK_004",
+    "assign::UAV_07::TASK_004",
+    "assign::UAV_13::TASK_004",
+    "assign::UAV_01::TASK_005",
+    "assign::UAV_04::TASK_005",
+    "assign::UAV_06::TASK_005",
+    "assign::UAV_07::TASK_005",
+    "assign::UAV_08::TASK_005",
+    "assign::UAV_09::TASK_005",
+    "assign::UAV_11::TASK_005",
+    "assign::UAV_12::TASK_005",
+    "assign::UAV_13::TASK_005",
+    "assign::UAV_14::TASK_005",
+    "assign::UAV_15::TASK_005",
+    "assign::UAV_03::TASK_006",
+    "assign::UAV_06::TASK_006",
+    "assign::UAV_07::TASK_006",
+    "assign::UAV_13::TASK_006",
+    "assign::UAV_02::TASK_007",
+    "assign::UAV_04::TASK_007",
+    "assign::UAV_05::TASK_007",
+    "assign::UAV_08::TASK_007",
+    "assign::UAV_10::TASK_007",
+    "assign::UAV_01::TASK_008",
+    "assign::UAV_04::TASK_008",
+    "assign::UAV_06::TASK_008",
+    "assign::UAV_07::TASK_008",
+    "assign::UAV_08::TASK_008",
+    "assign::UAV_09::TASK_008",
+    "assign::UAV_11::TASK_008",
+    "assign::UAV_12::TASK_008",
+    "assign::UAV_13::TASK_008",
+    "assign::UAV_14::TASK_008",
+    "assign::UAV_15::TASK_008",
+    "assign::UAV_01::TASK_009",
+    "assign::UAV_04::TASK_009",
+    "assign::UAV_06::TASK_009",
+    "assign::UAV_07::TASK_009",
+    "assign::UAV_08::TASK_009",
+    "assign::UAV_09::TASK_009",
+    "assign::UAV_11::TASK_009",
+    "assign::UAV_12::TASK_009",
+    "assign::UAV_13::TASK_009",
+    "assign::UAV_14::TASK_009",
+    "assign::UAV_15::TASK_009",
+    "assign::UAV_01::TASK_010",
+    "assign::UAV_04::TASK_010",
+    "assign::UAV_06::TASK_010",
+    "assign::UAV_07::TASK_010",
+    "assign::UAV_08::TASK_010",
+    "assign::UAV_09::TASK_010",
+    "assign::UAV_11::TASK_010",
+    "assign::UAV_12::TASK_010",
+    "assign::UAV_13::TASK_010",
+    "assign::UAV_14::TASK_010",
+    "assign::UAV_15::TASK_010",
+    "assign::UAV_01::TASK_011",
+    "assign::UAV_04::TASK_011",
+    "assign::UAV_06::TASK_011",
+    "assign::UAV_07::TASK_011",
+    "assign::UAV_08::TASK_011",
+    "assign::UAV_09::TASK_011",
+    "assign::UAV_11::TASK_011",
+    "assign::UAV_12::TASK_011",
+    "assign::UAV_13::TASK_011",
+    "assign::UAV_14::TASK_011",
+    "assign::UAV_15::TASK_011",
+    "assign::UAV_03::TASK_012",
+    "assign::UAV_06::TASK_012",
+    "assign::UAV_07::TASK_012",
+    "assign::UAV_13::TASK_012",
+    "assign::UAV_01::TASK_013",
+    "assign::UAV_04::TASK_013",
+    "assign::UAV_06::TASK_013",
+    "assign::UAV_07::TASK_013",
+    "assign::UAV_08::TASK_013",
+    "assign::UAV_09::TASK_013",
+    "assign::UAV_11::TASK_013",
+    "assign::UAV_12::TASK_013",
+    "assign::UAV_13::TASK_013",
+    "assign::UAV_14::TASK_013",
+    "assign::UAV_15::TASK_013",
+    "assign::UAV_02::TASK_014",
+    "assign::UAV_04::TASK_014",
+    "assign::UAV_05::TASK_014",
+    "assign::UAV_08::TASK_014",
+    "assign::UAV_10::TASK_014",
+    "assign::UAV_02::TASK_015",
+    "assign::UAV_04::TASK_015",
+    "assign::UAV_05::TASK_015",
+    "assign::UAV_08::TASK_015",
+    "assign::UAV_10::TASK_015",
+    "assign::UAV_01::TASK_016",
+    "assign::UAV_04::TASK_016",
+    "assign::UAV_06::TASK_016",
+    "assign::UAV_07::TASK_016",
+    "assign::UAV_08::TASK_016",
+    "assign::UAV_09::TASK_016",
+    "assign::UAV_11::TASK_016",
+    "assign::UAV_12::TASK_016",
+    "assign::UAV_13::TASK_016",
+    "assign::UAV_14::TASK_016",
+    "assign::UAV_15::TASK_016",
+    "assign::UAV_01::TASK_017",
+    "assign::UAV_04::TASK_017",
+    "assign::UAV_06::TASK_017",
+    "assign::UAV_07::TASK_017",
+    "assign::UAV_08::TASK_017",
+    "assign::UAV_09::TASK_017",
+    "assign::UAV_11::TASK_017",
+    "assign::UAV_12::TASK_017",
+    "assign::UAV_13::TASK_017",
+    "assign::UAV_14::TASK_017",
+    "assign::UAV_15::TASK_017",
+    "assign::UAV_01::TASK_018",
+    "assign::UAV_04::TASK_018",
+    "assign::UAV_06::TASK_018",
+    "assign::UAV_07::TASK_018",
+    "assign::UAV_08::TASK_018",
+    "assign::UAV_09::TASK_018",
+    "assign::UAV_11::TASK_018",
+    "assign::UAV_12::TASK_018",
+    "assign::UAV_13::TASK_018",
+    "assign::UAV_14::TASK_018",
+    "assign::UAV_15::TASK_018",
+    "assign::UAV_02::TASK_019",
+    "assign::UAV_04::TASK_019",
+    "assign::UAV_05::TASK_019",
+    "assign::UAV_08::TASK_019",
+    "assign::UAV_10::TASK_019",
+    "assign::UAV_02::TASK_020",
+    "assign::UAV_04::TASK_020",
+    "assign::UAV_05::TASK_020",
+    "assign::UAV_08::TASK_020",
+    "assign::UAV_10::TASK_020",
+    "assign::UAV_03::TASK_021",
+    "assign::UAV_06::TASK_021",
+    "assign::UAV_07::TASK_021",
+    "assign::UAV_13::TASK_021",
+    "assign::UAV_03::TASK_022",
+    "assign::UAV_06::TASK_022",
+    "assign::UAV_07::TASK_022",
+    "assign::UAV_13::TASK_022",
+    "assign::UAV_02::TASK_023",
+    "assign::UAV_04::TASK_023",
+    "assign::UAV_05::TASK_023",
+    "assign::UAV_08::TASK_023",
+    "assign::UAV_10::TASK_023",
+    "assign::UAV_02::TASK_024",
+    "assign::UAV_04::TASK_024",
+    "assign::UAV_05::TASK_024",
+    "assign::UAV_08::TASK_024",
+    "assign::UAV_10::TASK_024",
+    "assign::UAV_01::TASK_025",
+    "assign::UAV_04::TASK_025",
+    "assign::UAV_06::TASK_025",
+    "assign::UAV_07::TASK_025",
+    "assign::UAV_08::TASK_025",
+    "assign::UAV_09::TASK_025",
+    "assign::UAV_11::TASK_025",
+    "assign::UAV_12::TASK_025",
+    "assign::UAV_13::TASK_025",
+    "assign::UAV_14::TASK_025",
+    "assign::UAV_15::TASK_025",
+    "assign::UAV_01::TASK_026",
+    "assign::UAV_04::TASK_026",
+    "assign::UAV_06::TASK_026",
+    "assign::UAV_07::TASK_026",
+    "assign::UAV_08::TASK_026",
+    "assign::UAV_09::TASK_026",
+    "assign::UAV_11::TASK_026",
+    "assign::UAV_12::TASK_026",
+    "assign::UAV_13::TASK_026",
+    "assign::UAV_14::TASK_026",
+    "assign::UAV_15::TASK_026",
+    "assign::UAV_02::TASK_027",
+    "assign::UAV_04::TASK_027",
+    "assign::UAV_05::TASK_027",
+    "assign::UAV_08::TASK_027",
+    "assign::UAV_10::TASK_027",
+    "assign::UAV_03::TASK_028",
+    "assign::UAV_06::TASK_028",
+    "assign::UAV_07::TASK_028",
+    "assign::UAV_13::TASK_028",
+    "assign::UAV_01::TASK_029",
+    "assign::UAV_04::TASK_029",
+    "assign::UAV_06::TASK_029",
+    "assign::UAV_07::TASK_029",
+    "assign::UAV_08::TASK_029",
+    "assign::UAV_09::TASK_029",
+    "assign::UAV_11::TASK_029",
+    "assign::UAV_12::TASK_029",
+    "assign::UAV_13::TASK_029",
+    "assign::UAV_14::TASK_029",
+    "assign::UAV_15::TASK_029",
+    "assign::UAV_01::TASK_030",
+    "assign::UAV_04::TASK_030",
+    "assign::UAV_06::TASK_030",
+    "assign::UAV_07::TASK_030",
+    "assign::UAV_08::TASK_030",
+    "assign::UAV_09::TASK_030",
+    "assign::UAV_11::TASK_030",
+    "assign::UAV_12::TASK_030",
+    "assign::UAV_13::TASK_030",
+    "assign::UAV_14::TASK_030",
+    "assign::UAV_15::TASK_030",
+    "assign::UAV_01::TASK_031",
+    "assign::UAV_04::TASK_031",
+    "assign::UAV_06::TASK_031",
+    "assign::UAV_07::TASK_031",
+    "assign::UAV_08::TASK_031",
+    "assign::UAV_09::TASK_031",
+    "assign::UAV_11::TASK_031",
+    "assign::UAV_12::TASK_031",
+    "assign::UAV_13::TASK_031",
+    "assign::UAV_14::TASK_031",
+    "assign::UAV_15::TASK_031",
+    "assign::UAV_01::TASK_032",
+    "assign::UAV_04::TASK_032",
+    "assign::UAV_06::TASK_032",
+    "assign::UAV_07::TASK_032",
+    "assign::UAV_08::TASK_032",
+    "assign::UAV_09::TASK_032",
+    "assign::UAV_11::TASK_032",
+    "assign::UAV_12::TASK_032",
+    "assign::UAV_13::TASK_032",
+    "assign::UAV_14::TASK_032",
+    "assign::UAV_15::TASK_032",
+    "assign::UAV_03::TASK_033",
+    "assign::UAV_06::TASK_033",
+    "assign::UAV_07::TASK_033",
+    "assign::UAV_13::TASK_033",
+    "assign::UAV_03::TASK_034",
+    "assign::UAV_06::TASK_034",
+    "assign::UAV_07::TASK_034",
+    "assign::UAV_13::TASK_034",
+    "assign::UAV_01::TASK_035",
+    "assign::UAV_04::TASK_035",
+    "assign::UAV_06::TASK_035",
+    "assign::UAV_07::TASK_035",
+    "assign::UAV_08::TASK_035",
+    "assign::UAV_09::TASK_035",
+    "assign::UAV_11::TASK_035",
+    "assign::UAV_12::TASK_035",
+    "assign::UAV_13::TASK_035",
+    "assign::UAV_14::TASK_035",
+    "assign::UAV_15::TASK_035",
+    "assign::UAV_01::TASK_036",
+    "assign::UAV_04::TASK_036",
+    "assign::UAV_06::TASK_036",
+    "assign::UAV_07::TASK_036",
+    "assign::UAV_08::TASK_036",
+    "assign::UAV_09::TASK_036",
+    "assign::UAV_11::TASK_036",
+    "assign::UAV_12::TASK_036",
+    "assign::UAV_13::TASK_036",
+    "assign::UAV_14::TASK_036",
+    "assign::UAV_15::TASK_036",
+    "assign::UAV_03::TASK_037",
+    "assign::UAV_06::TASK_037",
+    "assign::UAV_07::TASK_037",
+    "assign::UAV_13::TASK_037",
+    "assign::UAV_02::TASK_038",
+    "assign::UAV_04::TASK_038",
+    "assign::UAV_05::TASK_038",
+    "assign::UAV_08::TASK_038",
+    "assign::UAV_10::TASK_038",
+    "assign::UAV_02::TASK_039",
+    "assign::UAV_04::TASK_039",
+    "assign::UAV_05::TASK_039",
+    "assign::UAV_08::TASK_039",
+    "assign::UAV_10::TASK_039",
+    "assign::UAV_01::TASK_040",
+    "assign::UAV_04::TASK_040",
+    "assign::UAV_06::TASK_040",
+    "assign::UAV_07::TASK_040",
+    "assign::UAV_08::TASK_040",
+    "assign::UAV_09::TASK_040",
+    "assign::UAV_11::TASK_040",
+    "assign::UAV_12::TASK_040",
+    "assign::UAV_13::TASK_040",
+    "assign::UAV_14::TASK_040",
+    "assign::UAV_15::TASK_040",
+    "assign::UAV_01::TASK_041",
+    "assign::UAV_04::TASK_041",
+    "assign::UAV_06::TASK_041",
+    "assign::UAV_07::TASK_041",
+    "assign::UAV_08::TASK_041",
+    "assign::UAV_09::TASK_041",
+    "assign::UAV_11::TASK_041",
+    "assign::UAV_12::TASK_041",
+    "assign::UAV_13::TASK_041",
+    "assign::UAV_14::TASK_041",
+    "assign::UAV_15::TASK_041",
+    "assign::UAV_01::TASK_042",
+    "assign::UAV_04::TASK_042",
+    "assign::UAV_06::TASK_042",
+    "assign::UAV_07::TASK_042",
+    "assign::UAV_08::TASK_042",
+    "assign::UAV_09::TASK_042",
+    "assign::UAV_11::TASK_042",
+    "assign::UAV_12::TASK_042",
+    "assign::UAV_13::TASK_042",
+    "assign::UAV_14::TASK_042",
+    "assign::UAV_15::TASK_042",
+    "assign::UAV_02::TASK_043",
+    "assign::UAV_04::TASK_043",
+    "assign::UAV_05::TASK_043",
+    "assign::UAV_08::TASK_043",
+    "assign::UAV_10::TASK_043",
+    "assign::UAV_03::TASK_044",
+    "assign::UAV_06::TASK_044",
+    "assign::UAV_07::TASK_044",
+    "assign::UAV_13::TASK_044",
+    "assign::UAV_01::TASK_045",
+    "assign::UAV_04::TASK_045",
+    "assign::UAV_06::TASK_045",
+    "assign::UAV_07::TASK_045",
+    "assign::UAV_08::TASK_045",
+    "assign::UAV_09::TASK_045",
+    "assign::UAV_11::TASK_045",
+    "assign::UAV_12::TASK_045",
+    "assign::UAV_13::TASK_045",
+    "assign::UAV_14::TASK_045",
+    "assign::UAV_15::TASK_045",
+    "assign::UAV_01::TASK_046",
+    "assign::UAV_04::TASK_046",
+    "assign::UAV_06::TASK_046",
+    "assign::UAV_07::TASK_046",
+    "assign::UAV_08::TASK_046",
+    "assign::UAV_09::TASK_046",
+    "assign::UAV_11::TASK_046",
+    "assign::UAV_12::TASK_046",
+    "assign::UAV_13::TASK_046",
+    "assign::UAV_14::TASK_046",
+    "assign::UAV_15::TASK_046",
+    "assign::UAV_03::TASK_047",
+    "assign::UAV_06::TASK_047",
+    "assign::UAV_07::TASK_047",
+    "assign::UAV_13::TASK_047",
+    "assign::UAV_03::TASK_048",
+    "assign::UAV_06::TASK_048",
+    "assign::UAV_07::TASK_048",
+    "assign::UAV_13::TASK_048",
+    "assign::UAV_02::TASK_049",
+    "assign::UAV_04::TASK_049",
+    "assign::UAV_05::TASK_049",
+    "assign::UAV_08::TASK_049",
+    "assign::UAV_10::TASK_049",
+    "assign::UAV_02::TASK_050",
+    "assign::UAV_04::TASK_050",
+    "assign::UAV_05::TASK_050",
+    "assign::UAV_08::TASK_050",
+    "assign::UAV_10::TASK_050",
+    "assign::UAV_02::TASK_051",
+    "assign::UAV_04::TASK_051",
+    "assign::UAV_05::TASK_051",
+    "assign::UAV_08::TASK_051",
+    "assign::UAV_10::TASK_051",
+    "assign::UAV_02::TASK_052",
+    "assign::UAV_04::TASK_052",
+    "assign::UAV_05::TASK_052",
+    "assign::UAV_08::TASK_052",
+    "assign::UAV_10::TASK_052",
+    "assign::UAV_02::TASK_053",
+    "assign::UAV_04::TASK_053",
+    "assign::UAV_05::TASK_053",
+    "assign::UAV_08::TASK_053",
+    "assign::UAV_10::TASK_053",
+    "assign::UAV_02::TASK_054",
+    "assign::UAV_04::TASK_054",
+    "assign::UAV_05::TASK_054",
+    "assign::UAV_08::TASK_054",
+    "assign::UAV_10::TASK_054",
+    "assign::UAV_02::TASK_055",
+    "assign::UAV_04::TASK_055",
+    "assign::UAV_05::TASK_055",
+    "assign::UAV_08::TASK_055",
+    "assign::UAV_10::TASK_055",
+    "assign::UAV_02::TASK_056",
+    "assign::UAV_04::TASK_056",
+    "assign::UAV_05::TASK_056",
+    "assign::UAV_08::TASK_056",
+    "assign::UAV_10::TASK_056",
+    "assign::UAV_02::TASK_057",
+    "assign::UAV_04::TASK_057",
+    "assign::UAV_05::TASK_057",
+    "assign::UAV_08::TASK_057",
+    "assign::UAV_10::TASK_057",
+    "assign::UAV_02::TASK_058",
+    "assign::UAV_04::TASK_058",
+    "assign::UAV_05::TASK_058",
+    "assign::UAV_08::TASK_058",
+    "assign::UAV_10::TASK_058",
+    "assign::UAV_02::TASK_059",
+    "assign::UAV_04::TASK_059",
+    "assign::UAV_05::TASK_059",
+    "assign::UAV_08::TASK_059",
+    "assign::UAV_10::TASK_059",
+    "assign::UAV_01::TASK_060",
+    "assign::UAV_04::TASK_060",
+    "assign::UAV_06::TASK_060",
+    "assign::UAV_07::TASK_060",
+    "assign::UAV_08::TASK_060",
+    "assign::UAV_09::TASK_060",
+    "assign::UAV_11::TASK_060",
+    "assign::UAV_12::TASK_060",
+    "assign::UAV_13::TASK_060",
+    "assign::UAV_14::TASK_060",
+    "assign::UAV_15::TASK_060",
+    "assign::UAV_02::TASK_061",
+    "assign::UAV_04::TASK_061",
+    "assign::UAV_05::TASK_061",
+    "assign::UAV_08::TASK_061",
+    "assign::UAV_10::TASK_061",
+    "assign::UAV_01::TASK_062",
+    "assign::UAV_04::TASK_062",
+    "assign::UAV_06::TASK_062",
+    "assign::UAV_07::TASK_062",
+    "assign::UAV_08::TASK_062",
+    "assign::UAV_09::TASK_062",
+    "assign::UAV_11::TASK_062",
+    "assign::UAV_12::TASK_062",
+    "assign::UAV_13::TASK_062",
+    "assign::UAV_14::TASK_062",
+    "assign::UAV_15::TASK_062",
+    "assign::UAV_01::TASK_063",
+    "assign::UAV_04::TASK_063",
+    "assign::UAV_06::TASK_063",
+    "assign::UAV_07::TASK_063",
+    "assign::UAV_08::TASK_063",
+    "assign::UAV_09::TASK_063",
+    "assign::UAV_11::TASK_063",
+    "assign::UAV_12::TASK_063",
+    "assign::UAV_13::TASK_063",
+    "assign::UAV_14::TASK_063",
+    "assign::UAV_15::TASK_063",
+    "assign::UAV_02::TASK_064",
+    "assign::UAV_04::TASK_064",
+    "assign::UAV_05::TASK_064",
+    "assign::UAV_08::TASK_064",
+    "assign::UAV_10::TASK_064",
+    "assign::UAV_02::TASK_065",
+    "assign::UAV_04::TASK_065",
+    "assign::UAV_05::TASK_065",
+    "assign::UAV_08::TASK_065",
+    "assign::UAV_10::TASK_065",
+    "assign::UAV_03::TASK_066",
+    "assign::UAV_06::TASK_066",
+    "assign::UAV_07::TASK_066",
+    "assign::UAV_13::TASK_066",
+    "assign::UAV_03::TASK_067",
+    "assign::UAV_06::TASK_067",
+    "assign::UAV_07::TASK_067",
+    "assign::UAV_13::TASK_067",
+    "assign::UAV_01::TASK_068",
+    "assign::UAV_04::TASK_068",
+    "assign::UAV_06::TASK_068",
+    "assign::UAV_07::TASK_068",
+    "assign::UAV_08::TASK_068",
+    "assign::UAV_09::TASK_068",
+    "assign::UAV_11::TASK_068",
+    "assign::UAV_12::TASK_068",
+    "assign::UAV_13::TASK_068",
+    "assign::UAV_14::TASK_068",
+    "assign::UAV_15::TASK_068",
+    "assign::UAV_01::TASK_069",
+    "assign::UAV_04::TASK_069",
+    "assign::UAV_06::TASK_069",
+    "assign::UAV_07::TASK_069",
+    "assign::UAV_08::TASK_069",
+    "assign::UAV_09::TASK_069",
+    "assign::UAV_11::TASK_069",
+    "assign::UAV_12::TASK_069",
+    "assign::UAV_13::TASK_069",
+    "assign::UAV_14::TASK_069",
+    "assign::UAV_15::TASK_069",
+    "assign::UAV_01::TASK_070",
+    "assign::UAV_04::TASK_070",
+    "assign::UAV_06::TASK_070",
+    "assign::UAV_07::TASK_070",
+    "assign::UAV_08::TASK_070",
+    "assign::UAV_09::TASK_070",
+    "assign::UAV_11::TASK_070",
+    "assign::UAV_12::TASK_070",
+    "assign::UAV_13::TASK_070",
+    "assign::UAV_14::TASK_070",
+    "assign::UAV_15::TASK_070",
+    "assign::UAV_01::TASK_071",
+    "assign::UAV_04::TASK_071",
+    "assign::UAV_06::TASK_071",
+    "assign::UAV_07::TASK_071",
+    "assign::UAV_08::TASK_071",
+    "assign::UAV_09::TASK_071",
+    "assign::UAV_11::TASK_071",
+    "assign::UAV_12::TASK_071",
+    "assign::UAV_13::TASK_071",
+    "assign::UAV_14::TASK_071",
+    "assign::UAV_15::TASK_071",
+    "assign::UAV_02::TASK_072",
+    "assign::UAV_04::TASK_072",
+    "assign::UAV_05::TASK_072",
+    "assign::UAV_08::TASK_072",
+    "assign::UAV_10::TASK_072",
+    "assign::UAV_01::TASK_073",
+    "assign::UAV_04::TASK_073",
+    "assign::UAV_06::TASK_073",
+    "assign::UAV_07::TASK_073",
+    "assign::UAV_08::TASK_073",
+    "assign::UAV_09::TASK_073",
+    "assign::UAV_11::TASK_073",
+    "assign::UAV_12::TASK_073",
+    "assign::UAV_13::TASK_073",
+    "assign::UAV_14::TASK_073",
+    "assign::UAV_15::TASK_073",
+    "assign::UAV_02::TASK_074",
+    "assign::UAV_04::TASK_074",
+    "assign::UAV_05::TASK_074",
+    "assign::UAV_08::TASK_074",
+    "assign::UAV_10::TASK_074",
+    "assign::UAV_02::TASK_075",
+    "assign::UAV_04::TASK_075",
+    "assign::UAV_05::TASK_075",
+    "assign::UAV_08::TASK_075",
+    "assign::UAV_10::TASK_075"
+  ],
+  "variable_mapping": [
+    {
+      "matrix_index": 1,
+      "state_index": 0,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 2,
+      "state_index": 1,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 3,
+      "state_index": 2,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 4,
+      "state_index": 3,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 5,
+      "state_index": 4,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 6,
+      "state_index": 5,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 7,
+      "state_index": 6,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 8,
+      "state_index": 7,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 9,
+      "state_index": 8,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 10,
+      "state_index": 9,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 11,
+      "state_index": 10,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 12,
+      "state_index": 11,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 13,
+      "state_index": 12,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 14,
+      "state_index": 13,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 15,
+      "state_index": 14,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 16,
+      "state_index": 15,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 17,
+      "state_index": 16,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 18,
+      "state_index": 17,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 19,
+      "state_index": 18,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 20,
+      "state_index": 19,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 21,
+      "state_index": 20,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 22,
+      "state_index": 21,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 23,
+      "state_index": 22,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 24,
+      "state_index": 23,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 25,
+      "state_index": 24,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 26,
+      "state_index": 25,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 27,
+      "state_index": 26,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 28,
+      "state_index": 27,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 29,
+      "state_index": 28,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 30,
+      "state_index": 29,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 31,
+      "state_index": 30,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 32,
+      "state_index": 31,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 33,
+      "state_index": 32,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 34,
+      "state_index": 33,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 35,
+      "state_index": 34,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 36,
+      "state_index": 35,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 37,
+      "state_index": 36,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 38,
+      "state_index": 37,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 39,
+      "state_index": 38,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 40,
+      "state_index": 39,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 41,
+      "state_index": 40,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 42,
+      "state_index": 41,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 43,
+      "state_index": 42,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 44,
+      "state_index": 43,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 45,
+      "state_index": 44,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 46,
+      "state_index": 45,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 47,
+      "state_index": 46,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 48,
+      "state_index": 47,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 49,
+      "state_index": 48,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 50,
+      "state_index": 49,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 51,
+      "state_index": 50,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 52,
+      "state_index": 51,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 53,
+      "state_index": 52,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 54,
+      "state_index": 53,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 55,
+      "state_index": 54,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 56,
+      "state_index": 55,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 57,
+      "state_index": 56,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 58,
+      "state_index": 57,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 59,
+      "state_index": 58,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 60,
+      "state_index": 59,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 61,
+      "state_index": 60,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 62,
+      "state_index": 61,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 63,
+      "state_index": 62,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 64,
+      "state_index": 63,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 65,
+      "state_index": 64,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 66,
+      "state_index": 65,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 67,
+      "state_index": 66,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 68,
+      "state_index": 67,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 69,
+      "state_index": 68,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 70,
+      "state_index": 69,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 71,
+      "state_index": 70,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 72,
+      "state_index": 71,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 73,
+      "state_index": 72,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 74,
+      "state_index": 73,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 75,
+      "state_index": 74,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 76,
+      "state_index": 75,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 77,
+      "state_index": 76,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 78,
+      "state_index": 77,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 79,
+      "state_index": 78,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 80,
+      "state_index": 79,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 81,
+      "state_index": 80,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 82,
+      "state_index": 81,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 83,
+      "state_index": 82,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 84,
+      "state_index": 83,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 85,
+      "state_index": 84,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 86,
+      "state_index": 85,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 87,
+      "state_index": 86,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 88,
+      "state_index": 87,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 89,
+      "state_index": 88,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 90,
+      "state_index": 89,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 91,
+      "state_index": 90,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 92,
+      "state_index": 91,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 93,
+      "state_index": 92,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 94,
+      "state_index": 93,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 95,
+      "state_index": 94,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 96,
+      "state_index": 95,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 97,
+      "state_index": 96,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 98,
+      "state_index": 97,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 99,
+      "state_index": 98,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 100,
+      "state_index": 99,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 101,
+      "state_index": 100,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 102,
+      "state_index": 101,
+      "task_id": "TASK_012",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 103,
+      "state_index": 102,
+      "task_id": "TASK_012",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 104,
+      "state_index": 103,
+      "task_id": "TASK_012",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 105,
+      "state_index": 104,
+      "task_id": "TASK_012",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 106,
+      "state_index": 105,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 107,
+      "state_index": 106,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 108,
+      "state_index": 107,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 109,
+      "state_index": 108,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 110,
+      "state_index": 109,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 111,
+      "state_index": 110,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 112,
+      "state_index": 111,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 113,
+      "state_index": 112,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 114,
+      "state_index": 113,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 115,
+      "state_index": 114,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 116,
+      "state_index": 115,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 117,
+      "state_index": 116,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 118,
+      "state_index": 117,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 119,
+      "state_index": 118,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 120,
+      "state_index": 119,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 121,
+      "state_index": 120,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 122,
+      "state_index": 121,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 123,
+      "state_index": 122,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 124,
+      "state_index": 123,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 125,
+      "state_index": 124,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 126,
+      "state_index": 125,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 127,
+      "state_index": 126,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 128,
+      "state_index": 127,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 129,
+      "state_index": 128,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 130,
+      "state_index": 129,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 131,
+      "state_index": 130,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 132,
+      "state_index": 131,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 133,
+      "state_index": 132,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 134,
+      "state_index": 133,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 135,
+      "state_index": 134,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 136,
+      "state_index": 135,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 137,
+      "state_index": 136,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 138,
+      "state_index": 137,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 139,
+      "state_index": 138,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 140,
+      "state_index": 139,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 141,
+      "state_index": 140,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 142,
+      "state_index": 141,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 143,
+      "state_index": 142,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 144,
+      "state_index": 143,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 145,
+      "state_index": 144,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 146,
+      "state_index": 145,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 147,
+      "state_index": 146,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 148,
+      "state_index": 147,
+      "task_id": "TASK_017",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 149,
+      "state_index": 148,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 150,
+      "state_index": 149,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 151,
+      "state_index": 150,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 152,
+      "state_index": 151,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 153,
+      "state_index": 152,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 154,
+      "state_index": 153,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 155,
+      "state_index": 154,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 156,
+      "state_index": 155,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 157,
+      "state_index": 156,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 158,
+      "state_index": 157,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 159,
+      "state_index": 158,
+      "task_id": "TASK_018",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 160,
+      "state_index": 159,
+      "task_id": "TASK_019",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 161,
+      "state_index": 160,
+      "task_id": "TASK_019",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 162,
+      "state_index": 161,
+      "task_id": "TASK_019",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 163,
+      "state_index": 162,
+      "task_id": "TASK_019",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 164,
+      "state_index": 163,
+      "task_id": "TASK_019",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 165,
+      "state_index": 164,
+      "task_id": "TASK_020",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 166,
+      "state_index": 165,
+      "task_id": "TASK_020",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 167,
+      "state_index": 166,
+      "task_id": "TASK_020",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 168,
+      "state_index": 167,
+      "task_id": "TASK_020",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 169,
+      "state_index": 168,
+      "task_id": "TASK_020",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 170,
+      "state_index": 169,
+      "task_id": "TASK_021",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 171,
+      "state_index": 170,
+      "task_id": "TASK_021",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 172,
+      "state_index": 171,
+      "task_id": "TASK_021",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 173,
+      "state_index": 172,
+      "task_id": "TASK_021",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 174,
+      "state_index": 173,
+      "task_id": "TASK_022",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 175,
+      "state_index": 174,
+      "task_id": "TASK_022",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 176,
+      "state_index": 175,
+      "task_id": "TASK_022",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 177,
+      "state_index": 176,
+      "task_id": "TASK_022",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 178,
+      "state_index": 177,
+      "task_id": "TASK_023",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 179,
+      "state_index": 178,
+      "task_id": "TASK_023",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 180,
+      "state_index": 179,
+      "task_id": "TASK_023",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 181,
+      "state_index": 180,
+      "task_id": "TASK_023",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 182,
+      "state_index": 181,
+      "task_id": "TASK_023",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 183,
+      "state_index": 182,
+      "task_id": "TASK_024",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 184,
+      "state_index": 183,
+      "task_id": "TASK_024",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 185,
+      "state_index": 184,
+      "task_id": "TASK_024",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 186,
+      "state_index": 185,
+      "task_id": "TASK_024",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 187,
+      "state_index": 186,
+      "task_id": "TASK_024",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 188,
+      "state_index": 187,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 189,
+      "state_index": 188,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 190,
+      "state_index": 189,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 191,
+      "state_index": 190,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 192,
+      "state_index": 191,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 193,
+      "state_index": 192,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 194,
+      "state_index": 193,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 195,
+      "state_index": 194,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 196,
+      "state_index": 195,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 197,
+      "state_index": 196,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 198,
+      "state_index": 197,
+      "task_id": "TASK_025",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 199,
+      "state_index": 198,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 200,
+      "state_index": 199,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 201,
+      "state_index": 200,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 202,
+      "state_index": 201,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 203,
+      "state_index": 202,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 204,
+      "state_index": 203,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 205,
+      "state_index": 204,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 206,
+      "state_index": 205,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 207,
+      "state_index": 206,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 208,
+      "state_index": 207,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 209,
+      "state_index": 208,
+      "task_id": "TASK_026",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 210,
+      "state_index": 209,
+      "task_id": "TASK_027",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 211,
+      "state_index": 210,
+      "task_id": "TASK_027",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 212,
+      "state_index": 211,
+      "task_id": "TASK_027",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 213,
+      "state_index": 212,
+      "task_id": "TASK_027",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 214,
+      "state_index": 213,
+      "task_id": "TASK_027",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 215,
+      "state_index": 214,
+      "task_id": "TASK_028",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 216,
+      "state_index": 215,
+      "task_id": "TASK_028",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 217,
+      "state_index": 216,
+      "task_id": "TASK_028",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 218,
+      "state_index": 217,
+      "task_id": "TASK_028",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 219,
+      "state_index": 218,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 220,
+      "state_index": 219,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 221,
+      "state_index": 220,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 222,
+      "state_index": 221,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 223,
+      "state_index": 222,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 224,
+      "state_index": 223,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 225,
+      "state_index": 224,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 226,
+      "state_index": 225,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 227,
+      "state_index": 226,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 228,
+      "state_index": 227,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 229,
+      "state_index": 228,
+      "task_id": "TASK_029",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 230,
+      "state_index": 229,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 231,
+      "state_index": 230,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 232,
+      "state_index": 231,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 233,
+      "state_index": 232,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 234,
+      "state_index": 233,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 235,
+      "state_index": 234,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 236,
+      "state_index": 235,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 237,
+      "state_index": 236,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 238,
+      "state_index": 237,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 239,
+      "state_index": 238,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 240,
+      "state_index": 239,
+      "task_id": "TASK_030",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 241,
+      "state_index": 240,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 242,
+      "state_index": 241,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 243,
+      "state_index": 242,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 244,
+      "state_index": 243,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 245,
+      "state_index": 244,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 246,
+      "state_index": 245,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 247,
+      "state_index": 246,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 248,
+      "state_index": 247,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 249,
+      "state_index": 248,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 250,
+      "state_index": 249,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 251,
+      "state_index": 250,
+      "task_id": "TASK_031",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 252,
+      "state_index": 251,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 253,
+      "state_index": 252,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 254,
+      "state_index": 253,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 255,
+      "state_index": 254,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 256,
+      "state_index": 255,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 257,
+      "state_index": 256,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 258,
+      "state_index": 257,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 259,
+      "state_index": 258,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 260,
+      "state_index": 259,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 261,
+      "state_index": 260,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 262,
+      "state_index": 261,
+      "task_id": "TASK_032",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 263,
+      "state_index": 262,
+      "task_id": "TASK_033",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 264,
+      "state_index": 263,
+      "task_id": "TASK_033",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 265,
+      "state_index": 264,
+      "task_id": "TASK_033",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 266,
+      "state_index": 265,
+      "task_id": "TASK_033",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 267,
+      "state_index": 266,
+      "task_id": "TASK_034",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 268,
+      "state_index": 267,
+      "task_id": "TASK_034",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 269,
+      "state_index": 268,
+      "task_id": "TASK_034",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 270,
+      "state_index": 269,
+      "task_id": "TASK_034",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 271,
+      "state_index": 270,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 272,
+      "state_index": 271,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 273,
+      "state_index": 272,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 274,
+      "state_index": 273,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 275,
+      "state_index": 274,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 276,
+      "state_index": 275,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 277,
+      "state_index": 276,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 278,
+      "state_index": 277,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 279,
+      "state_index": 278,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 280,
+      "state_index": 279,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 281,
+      "state_index": 280,
+      "task_id": "TASK_035",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 282,
+      "state_index": 281,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 283,
+      "state_index": 282,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 284,
+      "state_index": 283,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 285,
+      "state_index": 284,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 286,
+      "state_index": 285,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 287,
+      "state_index": 286,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 288,
+      "state_index": 287,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 289,
+      "state_index": 288,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 290,
+      "state_index": 289,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 291,
+      "state_index": 290,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 292,
+      "state_index": 291,
+      "task_id": "TASK_036",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 293,
+      "state_index": 292,
+      "task_id": "TASK_037",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 294,
+      "state_index": 293,
+      "task_id": "TASK_037",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 295,
+      "state_index": 294,
+      "task_id": "TASK_037",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 296,
+      "state_index": 295,
+      "task_id": "TASK_037",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 297,
+      "state_index": 296,
+      "task_id": "TASK_038",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 298,
+      "state_index": 297,
+      "task_id": "TASK_038",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 299,
+      "state_index": 298,
+      "task_id": "TASK_038",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 300,
+      "state_index": 299,
+      "task_id": "TASK_038",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 301,
+      "state_index": 300,
+      "task_id": "TASK_038",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 302,
+      "state_index": 301,
+      "task_id": "TASK_039",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 303,
+      "state_index": 302,
+      "task_id": "TASK_039",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 304,
+      "state_index": 303,
+      "task_id": "TASK_039",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 305,
+      "state_index": 304,
+      "task_id": "TASK_039",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 306,
+      "state_index": 305,
+      "task_id": "TASK_039",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 307,
+      "state_index": 306,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 308,
+      "state_index": 307,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 309,
+      "state_index": 308,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 310,
+      "state_index": 309,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 311,
+      "state_index": 310,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 312,
+      "state_index": 311,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 313,
+      "state_index": 312,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 314,
+      "state_index": 313,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 315,
+      "state_index": 314,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 316,
+      "state_index": 315,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 317,
+      "state_index": 316,
+      "task_id": "TASK_040",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 318,
+      "state_index": 317,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 319,
+      "state_index": 318,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 320,
+      "state_index": 319,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 321,
+      "state_index": 320,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 322,
+      "state_index": 321,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 323,
+      "state_index": 322,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 324,
+      "state_index": 323,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 325,
+      "state_index": 324,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 326,
+      "state_index": 325,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 327,
+      "state_index": 326,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 328,
+      "state_index": 327,
+      "task_id": "TASK_041",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 329,
+      "state_index": 328,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 330,
+      "state_index": 329,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 331,
+      "state_index": 330,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 332,
+      "state_index": 331,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 333,
+      "state_index": 332,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 334,
+      "state_index": 333,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 335,
+      "state_index": 334,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 336,
+      "state_index": 335,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 337,
+      "state_index": 336,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 338,
+      "state_index": 337,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 339,
+      "state_index": 338,
+      "task_id": "TASK_042",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 340,
+      "state_index": 339,
+      "task_id": "TASK_043",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 341,
+      "state_index": 340,
+      "task_id": "TASK_043",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 342,
+      "state_index": 341,
+      "task_id": "TASK_043",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 343,
+      "state_index": 342,
+      "task_id": "TASK_043",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 344,
+      "state_index": 343,
+      "task_id": "TASK_043",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 345,
+      "state_index": 344,
+      "task_id": "TASK_044",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 346,
+      "state_index": 345,
+      "task_id": "TASK_044",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 347,
+      "state_index": 346,
+      "task_id": "TASK_044",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 348,
+      "state_index": 347,
+      "task_id": "TASK_044",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 349,
+      "state_index": 348,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 350,
+      "state_index": 349,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 351,
+      "state_index": 350,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 352,
+      "state_index": 351,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 353,
+      "state_index": 352,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 354,
+      "state_index": 353,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 355,
+      "state_index": 354,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 356,
+      "state_index": 355,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 357,
+      "state_index": 356,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 358,
+      "state_index": 357,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 359,
+      "state_index": 358,
+      "task_id": "TASK_045",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 360,
+      "state_index": 359,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 361,
+      "state_index": 360,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 362,
+      "state_index": 361,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 363,
+      "state_index": 362,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 364,
+      "state_index": 363,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 365,
+      "state_index": 364,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 366,
+      "state_index": 365,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 367,
+      "state_index": 366,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 368,
+      "state_index": 367,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 369,
+      "state_index": 368,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 370,
+      "state_index": 369,
+      "task_id": "TASK_046",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 371,
+      "state_index": 370,
+      "task_id": "TASK_047",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 372,
+      "state_index": 371,
+      "task_id": "TASK_047",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 373,
+      "state_index": 372,
+      "task_id": "TASK_047",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 374,
+      "state_index": 373,
+      "task_id": "TASK_047",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 375,
+      "state_index": 374,
+      "task_id": "TASK_048",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 376,
+      "state_index": 375,
+      "task_id": "TASK_048",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 377,
+      "state_index": 376,
+      "task_id": "TASK_048",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 378,
+      "state_index": 377,
+      "task_id": "TASK_048",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 379,
+      "state_index": 378,
+      "task_id": "TASK_049",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 380,
+      "state_index": 379,
+      "task_id": "TASK_049",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 381,
+      "state_index": 380,
+      "task_id": "TASK_049",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 382,
+      "state_index": 381,
+      "task_id": "TASK_049",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 383,
+      "state_index": 382,
+      "task_id": "TASK_049",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 384,
+      "state_index": 383,
+      "task_id": "TASK_050",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 385,
+      "state_index": 384,
+      "task_id": "TASK_050",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 386,
+      "state_index": 385,
+      "task_id": "TASK_050",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 387,
+      "state_index": 386,
+      "task_id": "TASK_050",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 388,
+      "state_index": 387,
+      "task_id": "TASK_050",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 389,
+      "state_index": 388,
+      "task_id": "TASK_051",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 390,
+      "state_index": 389,
+      "task_id": "TASK_051",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 391,
+      "state_index": 390,
+      "task_id": "TASK_051",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 392,
+      "state_index": 391,
+      "task_id": "TASK_051",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 393,
+      "state_index": 392,
+      "task_id": "TASK_051",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 394,
+      "state_index": 393,
+      "task_id": "TASK_052",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 395,
+      "state_index": 394,
+      "task_id": "TASK_052",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 396,
+      "state_index": 395,
+      "task_id": "TASK_052",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 397,
+      "state_index": 396,
+      "task_id": "TASK_052",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 398,
+      "state_index": 397,
+      "task_id": "TASK_052",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 399,
+      "state_index": 398,
+      "task_id": "TASK_053",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 400,
+      "state_index": 399,
+      "task_id": "TASK_053",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 401,
+      "state_index": 400,
+      "task_id": "TASK_053",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 402,
+      "state_index": 401,
+      "task_id": "TASK_053",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 403,
+      "state_index": 402,
+      "task_id": "TASK_053",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 404,
+      "state_index": 403,
+      "task_id": "TASK_054",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 405,
+      "state_index": 404,
+      "task_id": "TASK_054",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 406,
+      "state_index": 405,
+      "task_id": "TASK_054",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 407,
+      "state_index": 406,
+      "task_id": "TASK_054",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 408,
+      "state_index": 407,
+      "task_id": "TASK_054",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 409,
+      "state_index": 408,
+      "task_id": "TASK_055",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 410,
+      "state_index": 409,
+      "task_id": "TASK_055",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 411,
+      "state_index": 410,
+      "task_id": "TASK_055",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 412,
+      "state_index": 411,
+      "task_id": "TASK_055",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 413,
+      "state_index": 412,
+      "task_id": "TASK_055",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 414,
+      "state_index": 413,
+      "task_id": "TASK_056",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 415,
+      "state_index": 414,
+      "task_id": "TASK_056",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 416,
+      "state_index": 415,
+      "task_id": "TASK_056",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 417,
+      "state_index": 416,
+      "task_id": "TASK_056",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 418,
+      "state_index": 417,
+      "task_id": "TASK_056",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 419,
+      "state_index": 418,
+      "task_id": "TASK_057",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 420,
+      "state_index": 419,
+      "task_id": "TASK_057",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 421,
+      "state_index": 420,
+      "task_id": "TASK_057",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 422,
+      "state_index": 421,
+      "task_id": "TASK_057",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 423,
+      "state_index": 422,
+      "task_id": "TASK_057",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 424,
+      "state_index": 423,
+      "task_id": "TASK_058",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 425,
+      "state_index": 424,
+      "task_id": "TASK_058",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 426,
+      "state_index": 425,
+      "task_id": "TASK_058",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 427,
+      "state_index": 426,
+      "task_id": "TASK_058",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 428,
+      "state_index": 427,
+      "task_id": "TASK_058",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 429,
+      "state_index": 428,
+      "task_id": "TASK_059",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 430,
+      "state_index": 429,
+      "task_id": "TASK_059",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 431,
+      "state_index": 430,
+      "task_id": "TASK_059",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 432,
+      "state_index": 431,
+      "task_id": "TASK_059",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 433,
+      "state_index": 432,
+      "task_id": "TASK_059",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 434,
+      "state_index": 433,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 435,
+      "state_index": 434,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 436,
+      "state_index": 435,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 437,
+      "state_index": 436,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 438,
+      "state_index": 437,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 439,
+      "state_index": 438,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 440,
+      "state_index": 439,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 441,
+      "state_index": 440,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 442,
+      "state_index": 441,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 443,
+      "state_index": 442,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 444,
+      "state_index": 443,
+      "task_id": "TASK_060",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 445,
+      "state_index": 444,
+      "task_id": "TASK_061",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 446,
+      "state_index": 445,
+      "task_id": "TASK_061",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 447,
+      "state_index": 446,
+      "task_id": "TASK_061",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 448,
+      "state_index": 447,
+      "task_id": "TASK_061",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 449,
+      "state_index": 448,
+      "task_id": "TASK_061",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 450,
+      "state_index": 449,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 451,
+      "state_index": 450,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 452,
+      "state_index": 451,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 453,
+      "state_index": 452,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 454,
+      "state_index": 453,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 455,
+      "state_index": 454,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 456,
+      "state_index": 455,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 457,
+      "state_index": 456,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 458,
+      "state_index": 457,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 459,
+      "state_index": 458,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 460,
+      "state_index": 459,
+      "task_id": "TASK_062",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 461,
+      "state_index": 460,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 462,
+      "state_index": 461,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 463,
+      "state_index": 462,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 464,
+      "state_index": 463,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 465,
+      "state_index": 464,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 466,
+      "state_index": 465,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 467,
+      "state_index": 466,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 468,
+      "state_index": 467,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 469,
+      "state_index": 468,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 470,
+      "state_index": 469,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 471,
+      "state_index": 470,
+      "task_id": "TASK_063",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 472,
+      "state_index": 471,
+      "task_id": "TASK_064",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 473,
+      "state_index": 472,
+      "task_id": "TASK_064",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 474,
+      "state_index": 473,
+      "task_id": "TASK_064",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 475,
+      "state_index": 474,
+      "task_id": "TASK_064",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 476,
+      "state_index": 475,
+      "task_id": "TASK_064",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 477,
+      "state_index": 476,
+      "task_id": "TASK_065",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 478,
+      "state_index": 477,
+      "task_id": "TASK_065",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 479,
+      "state_index": 478,
+      "task_id": "TASK_065",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 480,
+      "state_index": 479,
+      "task_id": "TASK_065",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 481,
+      "state_index": 480,
+      "task_id": "TASK_065",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 482,
+      "state_index": 481,
+      "task_id": "TASK_066",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 483,
+      "state_index": 482,
+      "task_id": "TASK_066",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 484,
+      "state_index": 483,
+      "task_id": "TASK_066",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 485,
+      "state_index": 484,
+      "task_id": "TASK_066",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 486,
+      "state_index": 485,
+      "task_id": "TASK_067",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 487,
+      "state_index": 486,
+      "task_id": "TASK_067",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 488,
+      "state_index": 487,
+      "task_id": "TASK_067",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 489,
+      "state_index": 488,
+      "task_id": "TASK_067",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 490,
+      "state_index": 489,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 491,
+      "state_index": 490,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 492,
+      "state_index": 491,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 493,
+      "state_index": 492,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 494,
+      "state_index": 493,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 495,
+      "state_index": 494,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 496,
+      "state_index": 495,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 497,
+      "state_index": 496,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 498,
+      "state_index": 497,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 499,
+      "state_index": 498,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 500,
+      "state_index": 499,
+      "task_id": "TASK_068",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 501,
+      "state_index": 500,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 502,
+      "state_index": 501,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 503,
+      "state_index": 502,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 504,
+      "state_index": 503,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 505,
+      "state_index": 504,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 506,
+      "state_index": 505,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 507,
+      "state_index": 506,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 508,
+      "state_index": 507,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 509,
+      "state_index": 508,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 510,
+      "state_index": 509,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 511,
+      "state_index": 510,
+      "task_id": "TASK_069",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 512,
+      "state_index": 511,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 513,
+      "state_index": 512,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 514,
+      "state_index": 513,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 515,
+      "state_index": 514,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 516,
+      "state_index": 515,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 517,
+      "state_index": 516,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 518,
+      "state_index": 517,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 519,
+      "state_index": 518,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 520,
+      "state_index": 519,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 521,
+      "state_index": 520,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 522,
+      "state_index": 521,
+      "task_id": "TASK_070",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 523,
+      "state_index": 522,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 524,
+      "state_index": 523,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 525,
+      "state_index": 524,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 526,
+      "state_index": 525,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 527,
+      "state_index": 526,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 528,
+      "state_index": 527,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 529,
+      "state_index": 528,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 530,
+      "state_index": 529,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 531,
+      "state_index": 530,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 532,
+      "state_index": 531,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 533,
+      "state_index": 532,
+      "task_id": "TASK_071",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 534,
+      "state_index": 533,
+      "task_id": "TASK_072",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 535,
+      "state_index": 534,
+      "task_id": "TASK_072",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 536,
+      "state_index": 535,
+      "task_id": "TASK_072",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 537,
+      "state_index": 536,
+      "task_id": "TASK_072",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 538,
+      "state_index": 537,
+      "task_id": "TASK_072",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 539,
+      "state_index": 538,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 540,
+      "state_index": 539,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 541,
+      "state_index": 540,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_06"
+    },
+    {
+      "matrix_index": 542,
+      "state_index": 541,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_07"
+    },
+    {
+      "matrix_index": 543,
+      "state_index": 542,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 544,
+      "state_index": 543,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_09"
+    },
+    {
+      "matrix_index": 545,
+      "state_index": 544,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_11"
+    },
+    {
+      "matrix_index": 546,
+      "state_index": 545,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_12"
+    },
+    {
+      "matrix_index": 547,
+      "state_index": 546,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_13"
+    },
+    {
+      "matrix_index": 548,
+      "state_index": 547,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_14"
+    },
+    {
+      "matrix_index": 549,
+      "state_index": 548,
+      "task_id": "TASK_073",
+      "uav_id": "UAV_15"
+    },
+    {
+      "matrix_index": 550,
+      "state_index": 549,
+      "task_id": "TASK_074",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 551,
+      "state_index": 550,
+      "task_id": "TASK_074",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 552,
+      "state_index": 551,
+      "task_id": "TASK_074",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 553,
+      "state_index": 552,
+      "task_id": "TASK_074",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 554,
+      "state_index": 553,
+      "task_id": "TASK_074",
+      "uav_id": "UAV_10"
+    },
+    {
+      "matrix_index": 555,
+      "state_index": 554,
+      "task_id": "TASK_075",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 556,
+      "state_index": 555,
+      "task_id": "TASK_075",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 557,
+      "state_index": 556,
+      "task_id": "TASK_075",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 558,
+      "state_index": 557,
+      "task_id": "TASK_075",
+      "uav_id": "UAV_08"
+    },
+    {
+      "matrix_index": 559,
+      "state_index": 558,
+      "task_id": "TASK_075",
+      "uav_id": "UAV_10"
+    }
+  ]
+}

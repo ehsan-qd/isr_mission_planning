@@ -1,0 +1,267 @@
+{
+  "job_id": "small_seed_101_assignment_geographic_v2_qubo",
+  "scenario_id": "small_seed_101",
+  "scale": "small",
+  "seed": 101,
+  "tasks": 16,
+  "uavs": 5,
+  "variables": 33,
+  "nonzeros": 333,
+  "matrix_file": "mtx/small_seed_101_assignment_geographic_v2_qubo.mtx",
+  "metadata_file": "small_seed_101_assignment_geographic_v2_qubo.json",
+  "matrix_sha256": "c33dca417e9ae71992744aee6b21ed4cfe6c9d1b90a0398b5ccdff32f0ad9f81",
+  "scenario_sha256": "5297805c40a0464ced99dbb1cb4f6fd11292e54182c6c3c264fb374c22c172f4",
+  "encoding_seconds": 0.00018937501590698957,
+  "schema_version": 1,
+  "formulation": {
+    "assignment_penalty": 12.0,
+    "base_weight": 0.75,
+    "cluster_weight": 0.25,
+    "workload_weight": 1.5,
+    "travel_burden_factor": 1.0,
+    "cluster_distance_cap": 1.0,
+    "formulation_name": "assignment_geographic_v2",
+    "formulation_version": "2.1"
+  },
+  "scenario_file": "scenarios/small_seed_101.json",
+  "matrix_format": "MatrixMarket matrix coordinate real general",
+  "matrix_storage": "full symmetric; off-diagonal upper-Q coefficients divided by two",
+  "energy_convention": "minimize E(x) = x^T Q x, x in {0,1}^n",
+  "constant_offset": 0.0,
+  "coefficient_scale": 1.0,
+  "variable_order": [
+    "assign::UAV_01::TASK_001",
+    "assign::UAV_04::TASK_001",
+    "assign::UAV_01::TASK_002",
+    "assign::UAV_04::TASK_002",
+    "assign::UAV_01::TASK_003",
+    "assign::UAV_04::TASK_003",
+    "assign::UAV_02::TASK_004",
+    "assign::UAV_04::TASK_004",
+    "assign::UAV_05::TASK_004",
+    "assign::UAV_02::TASK_005",
+    "assign::UAV_04::TASK_005",
+    "assign::UAV_05::TASK_005",
+    "assign::UAV_02::TASK_006",
+    "assign::UAV_04::TASK_006",
+    "assign::UAV_05::TASK_006",
+    "assign::UAV_03::TASK_007",
+    "assign::UAV_01::TASK_008",
+    "assign::UAV_04::TASK_008",
+    "assign::UAV_01::TASK_009",
+    "assign::UAV_04::TASK_009",
+    "assign::UAV_03::TASK_010",
+    "assign::UAV_01::TASK_011",
+    "assign::UAV_04::TASK_011",
+    "assign::UAV_03::TASK_012",
+    "assign::UAV_02::TASK_013",
+    "assign::UAV_04::TASK_013",
+    "assign::UAV_05::TASK_013",
+    "assign::UAV_01::TASK_014",
+    "assign::UAV_04::TASK_014",
+    "assign::UAV_01::TASK_015",
+    "assign::UAV_04::TASK_015",
+    "assign::UAV_01::TASK_016",
+    "assign::UAV_04::TASK_016"
+  ],
+  "variable_mapping": [
+    {
+      "matrix_index": 1,
+      "state_index": 0,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 2,
+      "state_index": 1,
+      "task_id": "TASK_001",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 3,
+      "state_index": 2,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 4,
+      "state_index": 3,
+      "task_id": "TASK_002",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 5,
+      "state_index": 4,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 6,
+      "state_index": 5,
+      "task_id": "TASK_003",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 7,
+      "state_index": 6,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 8,
+      "state_index": 7,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 9,
+      "state_index": 8,
+      "task_id": "TASK_004",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 10,
+      "state_index": 9,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 11,
+      "state_index": 10,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 12,
+      "state_index": 11,
+      "task_id": "TASK_005",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 13,
+      "state_index": 12,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 14,
+      "state_index": 13,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 15,
+      "state_index": 14,
+      "task_id": "TASK_006",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 16,
+      "state_index": 15,
+      "task_id": "TASK_007",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 17,
+      "state_index": 16,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 18,
+      "state_index": 17,
+      "task_id": "TASK_008",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 19,
+      "state_index": 18,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 20,
+      "state_index": 19,
+      "task_id": "TASK_009",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 21,
+      "state_index": 20,
+      "task_id": "TASK_010",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 22,
+      "state_index": 21,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 23,
+      "state_index": 22,
+      "task_id": "TASK_011",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 24,
+      "state_index": 23,
+      "task_id": "TASK_012",
+      "uav_id": "UAV_03"
+    },
+    {
+      "matrix_index": 25,
+      "state_index": 24,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_02"
+    },
+    {
+      "matrix_index": 26,
+      "state_index": 25,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 27,
+      "state_index": 26,
+      "task_id": "TASK_013",
+      "uav_id": "UAV_05"
+    },
+    {
+      "matrix_index": 28,
+      "state_index": 27,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 29,
+      "state_index": 28,
+      "task_id": "TASK_014",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 30,
+      "state_index": 29,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 31,
+      "state_index": 30,
+      "task_id": "TASK_015",
+      "uav_id": "UAV_04"
+    },
+    {
+      "matrix_index": 32,
+      "state_index": 31,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_01"
+    },
+    {
+      "matrix_index": 33,
+      "state_index": 32,
+      "task_id": "TASK_016",
+      "uav_id": "UAV_04"
+    }
+  ]
+}

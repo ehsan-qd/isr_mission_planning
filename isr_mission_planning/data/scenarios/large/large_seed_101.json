@@ -1,0 +1,4337 @@
+{
+  "bases": [
+    {
+      "id": "BASE_1",
+      "location": {
+        "label": "Base 1",
+        "x": 48.0,
+        "y": 85.714
+      }
+    },
+    {
+      "id": "BASE_2",
+      "location": {
+        "label": "Base 2",
+        "x": 552.0,
+        "y": 171.429
+      }
+    },
+    {
+      "id": "BASE_3",
+      "location": {
+        "label": "Base 3",
+        "x": 48.0,
+        "y": 257.143
+      }
+    },
+    {
+      "id": "BASE_4",
+      "location": {
+        "label": "Base 4",
+        "x": 552.0,
+        "y": 342.857
+      }
+    },
+    {
+      "id": "BASE_5",
+      "location": {
+        "label": "Base 5",
+        "x": 48.0,
+        "y": 428.571
+      }
+    },
+    {
+      "id": "BASE_6",
+      "location": {
+        "label": "Base 6",
+        "x": 552.0,
+        "y": 514.286
+      }
+    }
+  ],
+  "metadata": {
+    "ensure_feasible": true,
+    "generator": "structured-v1",
+    "scale": "large",
+    "seed": 101
+  },
+  "minimum_separation": 5.0,
+  "operating_area": {
+    "height": 600.0,
+    "width": 600.0
+  },
+  "scenario_id": "large_seed_101",
+  "tasks": [
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_001",
+      "location": {
+        "label": "Task 1",
+        "x": 175.92,
+        "y": 248.457
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 4.643
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_002",
+      "location": {
+        "label": "Task 2",
+        "x": 414.616,
+        "y": 62.164
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 3.499
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_003",
+      "location": {
+        "label": "Task 3",
+        "x": 473.638,
+        "y": 383.886
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 2.204
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_004",
+      "location": {
+        "label": "Task 4",
+        "x": 443.564,
+        "y": 115.144
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 7.273
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_005",
+      "location": {
+        "label": "Task 5",
+        "x": 306.719,
+        "y": 136.071
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 3.331
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_006",
+      "location": {
+        "label": "Task 6",
+        "x": 346.133,
+        "y": 288.61
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 7.918
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_007",
+      "location": {
+        "label": "Task 7",
+        "x": 372.94,
+        "y": 389.179
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 3.82
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_008",
+      "location": {
+        "label": "Task 8",
+        "x": 508.002,
+        "y": 439.056
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.081
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_009",
+      "location": {
+        "label": "Task 9",
+        "x": 371.547,
+        "y": 62.42
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 5.879
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_010",
+      "location": {
+        "label": "Task 10",
+        "x": 500.673,
+        "y": 327.502
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 5.188
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_011",
+      "location": {
+        "label": "Task 11",
+        "x": 483.544,
+        "y": 64.752
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 3.304
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_012",
+      "location": {
+        "label": "Task 12",
+        "x": 310.487,
+        "y": 174.491
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.781
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_013",
+      "location": {
+        "label": "Task 13",
+        "x": 386.38,
+        "y": 409.386
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 5.32
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_014",
+      "location": {
+        "label": "Task 14",
+        "x": 271.979,
+        "y": 181.092
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 3.599
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_015",
+      "location": {
+        "label": "Task 15",
+        "x": 511.31,
+        "y": 230.576
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.018
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_016",
+      "location": {
+        "label": "Task 16",
+        "x": 508.464,
+        "y": 286.46
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 2.888
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_017",
+      "location": {
+        "label": "Task 17",
+        "x": 128.7,
+        "y": 357.66
+      },
+      "priority": 3.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.305
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_018",
+      "location": {
+        "label": "Task 18",
+        "x": 415.387,
+        "y": 118.446
+      },
+      "priority": 1.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.377
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_019",
+      "location": {
+        "label": "Task 19",
+        "x": 399.718,
+        "y": 108.378
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 5.363
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_020",
+      "location": {
+        "label": "Task 20",
+        "x": 423.215,
+        "y": 113.417
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.72
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_021",
+      "location": {
+        "label": "Task 21",
+        "x": 456.086,
+        "y": 119.259
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.904
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_022",
+      "location": {
+        "label": "Task 22",
+        "x": 477.65,
+        "y": 361.064
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 6.179
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_023",
+      "location": {
+        "label": "Task 23",
+        "x": 399.992,
+        "y": 123.173
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 2.192
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_024",
+      "location": {
+        "label": "Task 24",
+        "x": 317.466,
+        "y": 337.442
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 4.866
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_025",
+      "location": {
+        "label": "Task 25",
+        "x": 212.337,
+        "y": 342.841
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 1.836
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_026",
+      "location": {
+        "label": "Task 26",
+        "x": 443.061,
+        "y": 91.674
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.972
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_027",
+      "location": {
+        "label": "Task 27",
+        "x": 215.08,
+        "y": 531.952
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 5.681
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_028",
+      "location": {
+        "label": "Task 28",
+        "x": 157.418,
+        "y": 474.005
+      },
+      "priority": 3.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.96
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_029",
+      "location": {
+        "label": "Task 29",
+        "x": 147.641,
+        "y": 517.51
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 3.453
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_030",
+      "location": {
+        "label": "Task 30",
+        "x": 230.736,
+        "y": 135.61
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.615
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_031",
+      "location": {
+        "label": "Task 31",
+        "x": 233.462,
+        "y": 443.464
+      },
+      "priority": 7.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.758
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_032",
+      "location": {
+        "label": "Task 32",
+        "x": 243.151,
+        "y": 494.957
+      },
+      "priority": 4.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.877
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_033",
+      "location": {
+        "label": "Task 33",
+        "x": 306.246,
+        "y": 396.862
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 2.228
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_034",
+      "location": {
+        "label": "Task 34",
+        "x": 397.027,
+        "y": 479.146
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 5.303
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_035",
+      "location": {
+        "label": "Task 35",
+        "x": 288.018,
+        "y": 70.868
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 6.477
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_036",
+      "location": {
+        "label": "Task 36",
+        "x": 377.753,
+        "y": 486.512
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 5.896
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_037",
+      "location": {
+        "label": "Task 37",
+        "x": 150.166,
+        "y": 502.098
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 3.166
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_038",
+      "location": {
+        "label": "Task 38",
+        "x": 177.495,
+        "y": 349.864
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 5.87
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_039",
+      "location": {
+        "label": "Task 39",
+        "x": 480.585,
+        "y": 375.664
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 1.408
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_040",
+      "location": {
+        "label": "Task 40",
+        "x": 226.597,
+        "y": 133.849
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 6.903
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_041",
+      "location": {
+        "label": "Task 41",
+        "x": 216.448,
+        "y": 456.313
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 7.191
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_042",
+      "location": {
+        "label": "Task 42",
+        "x": 291.631,
+        "y": 53.562
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 5.169
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_043",
+      "location": {
+        "label": "Task 43",
+        "x": 131.461,
+        "y": 433.722
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 4.041
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_044",
+      "location": {
+        "label": "Task 44",
+        "x": 276.53,
+        "y": 220.561
+      },
+      "priority": 9.0,
+      "required_sensor": "EO",
+      "service_duration": 6.475
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_045",
+      "location": {
+        "label": "Task 45",
+        "x": 305.137,
+        "y": 418.675
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 3.426
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_046",
+      "location": {
+        "label": "Task 46",
+        "x": 266.016,
+        "y": 72.984
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 1.577
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_047",
+      "location": {
+        "label": "Task 47",
+        "x": 151.631,
+        "y": 373.749
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 6.086
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_048",
+      "location": {
+        "label": "Task 48",
+        "x": 206.186,
+        "y": 374.304
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 3.931
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_049",
+      "location": {
+        "label": "Task 49",
+        "x": 261.964,
+        "y": 112.82
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 7.383
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_050",
+      "location": {
+        "label": "Task 50",
+        "x": 277.539,
+        "y": 51.016
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.53
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_051",
+      "location": {
+        "label": "Task 51",
+        "x": 271.467,
+        "y": 255.168
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.602
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_052",
+      "location": {
+        "label": "Task 52",
+        "x": 256.76,
+        "y": 393.498
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 3.446
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_053",
+      "location": {
+        "label": "Task 53",
+        "x": 303.408,
+        "y": 431.122
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 7.183
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_054",
+      "location": {
+        "label": "Task 54",
+        "x": 224.769,
+        "y": 117.166
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 3.662
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_055",
+      "location": {
+        "label": "Task 55",
+        "x": 198.418,
+        "y": 300.138
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 4.596
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_056",
+      "location": {
+        "label": "Task 56",
+        "x": 425.59,
+        "y": 330.514
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 5.732
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_057",
+      "location": {
+        "label": "Task 57",
+        "x": 347.931,
+        "y": 474.845
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 2.281
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_058",
+      "location": {
+        "label": "Task 58",
+        "x": 346.945,
+        "y": 136.985
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 1.907
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_059",
+      "location": {
+        "label": "Task 59",
+        "x": 261.08,
+        "y": 113.529
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 4.46
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_060",
+      "location": {
+        "label": "Task 60",
+        "x": 309.848,
+        "y": 295.457
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 6.371
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_061",
+      "location": {
+        "label": "Task 61",
+        "x": 338.644,
+        "y": 216.403
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 7.556
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_062",
+      "location": {
+        "label": "Task 62",
+        "x": 480.156,
+        "y": 391.756
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 7.794
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_063",
+      "location": {
+        "label": "Task 63",
+        "x": 414.499,
+        "y": 420.494
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 5.388
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_064",
+      "location": {
+        "label": "Task 64",
+        "x": 377.917,
+        "y": 135.416
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 6.362
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_065",
+      "location": {
+        "label": "Task 65",
+        "x": 413.272,
+        "y": 112.342
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 5.045
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_066",
+      "location": {
+        "label": "Task 66",
+        "x": 269.813,
+        "y": 128.536
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 7.62
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_067",
+      "location": {
+        "label": "Task 67",
+        "x": 412.638,
+        "y": 387.84
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 2.278
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_068",
+      "location": {
+        "label": "Task 68",
+        "x": 475.014,
+        "y": 353.02
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 3.483
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_069",
+      "location": {
+        "label": "Task 69",
+        "x": 258.645,
+        "y": 123.272
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 7.636
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_070",
+      "location": {
+        "label": "Task 70",
+        "x": 321.99,
+        "y": 145.134
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.245
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_071",
+      "location": {
+        "label": "Task 71",
+        "x": 131.45,
+        "y": 524.283
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 7.477
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_072",
+      "location": {
+        "label": "Task 72",
+        "x": 419.846,
+        "y": 162.757
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 1.062
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_073",
+      "location": {
+        "label": "Task 73",
+        "x": 304.591,
+        "y": 396.43
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 7.597
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_074",
+      "location": {
+        "label": "Task 74",
+        "x": 228.097,
+        "y": 284.287
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 2.271
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_075",
+      "location": {
+        "label": "Task 75",
+        "x": 309.167,
+        "y": 111.487
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 1.472
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_076",
+      "location": {
+        "label": "Task 76",
+        "x": 453.238,
+        "y": 81.278
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.817
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_077",
+      "location": {
+        "label": "Task 77",
+        "x": 337.304,
+        "y": 528.286
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 5.814
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_078",
+      "location": {
+        "label": "Task 78",
+        "x": 575.506,
+        "y": 404.154
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 7.062
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_079",
+      "location": {
+        "label": "Task 79",
+        "x": 243.233,
+        "y": 338.601
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 5.887
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_080",
+      "location": {
+        "label": "Task 80",
+        "x": 410.919,
+        "y": 39.144
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.148
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_081",
+      "location": {
+        "label": "Task 81",
+        "x": 409.176,
+        "y": 352.88
+      },
+      "priority": 7.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.228
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_082",
+      "location": {
+        "label": "Task 82",
+        "x": 305.072,
+        "y": 213.322
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 4.317
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_083",
+      "location": {
+        "label": "Task 83",
+        "x": 83.401,
+        "y": 423.608
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.786
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_084",
+      "location": {
+        "label": "Task 84",
+        "x": 271.401,
+        "y": 426.251
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.762
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_085",
+      "location": {
+        "label": "Task 85",
+        "x": 408.261,
+        "y": 349.72
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 3.569
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_086",
+      "location": {
+        "label": "Task 86",
+        "x": 272.8,
+        "y": 446.186
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 1.553
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_087",
+      "location": {
+        "label": "Task 87",
+        "x": 484.065,
+        "y": 412.086
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 6.478
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_088",
+      "location": {
+        "label": "Task 88",
+        "x": 351.529,
+        "y": 93.854
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.765
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_089",
+      "location": {
+        "label": "Task 89",
+        "x": 450.335,
+        "y": 109.37
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 4.456
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_090",
+      "location": {
+        "label": "Task 90",
+        "x": 502.754,
+        "y": 287.158
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 5.362
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_091",
+      "location": {
+        "label": "Task 91",
+        "x": 298.01,
+        "y": 111.014
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 4.514
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_092",
+      "location": {
+        "label": "Task 92",
+        "x": 251.783,
+        "y": 140.453
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 5.294
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_093",
+      "location": {
+        "label": "Task 93",
+        "x": 90.089,
+        "y": 273.992
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.846
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_094",
+      "location": {
+        "label": "Task 94",
+        "x": 373.468,
+        "y": 94.495
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 4.614
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_095",
+      "location": {
+        "label": "Task 95",
+        "x": 316.744,
+        "y": 99.778
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 3.872
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_096",
+      "location": {
+        "label": "Task 96",
+        "x": 240.147,
+        "y": 334.702
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 3.345
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_097",
+      "location": {
+        "label": "Task 97",
+        "x": 16.124,
+        "y": 136.457
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 2.411
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_098",
+      "location": {
+        "label": "Task 98",
+        "x": 357.316,
+        "y": 444.24
+      },
+      "priority": 4.0,
+      "required_sensor": "SAR",
+      "service_duration": 4.604
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_099",
+      "location": {
+        "label": "Task 99",
+        "x": 300.709,
+        "y": 286.558
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 5.607
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_100",
+      "location": {
+        "label": "Task 100",
+        "x": 354.392,
+        "y": 493.532
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 3.533
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_101",
+      "location": {
+        "label": "Task 101",
+        "x": 215.167,
+        "y": 492.476
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 3.894
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_102",
+      "location": {
+        "label": "Task 102",
+        "x": 324.47,
+        "y": 452.48
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 7.728
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_103",
+      "location": {
+        "label": "Task 103",
+        "x": 412.046,
+        "y": 362.157
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 6.831
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_104",
+      "location": {
+        "label": "Task 104",
+        "x": 394.358,
+        "y": 74.719
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 4.128
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_105",
+      "location": {
+        "label": "Task 105",
+        "x": 553.746,
+        "y": 112.129
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.709
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_106",
+      "location": {
+        "label": "Task 106",
+        "x": 493.109,
+        "y": 62.913
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 6.047
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_107",
+      "location": {
+        "label": "Task 107",
+        "x": 358.281,
+        "y": 40.369
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 7.516
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_108",
+      "location": {
+        "label": "Task 108",
+        "x": 269.979,
+        "y": 323.148
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 3.907
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_109",
+      "location": {
+        "label": "Task 109",
+        "x": 182.147,
+        "y": 377.8
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 2.264
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_110",
+      "location": {
+        "label": "Task 110",
+        "x": 480.371,
+        "y": 367.415
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 6.285
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_111",
+      "location": {
+        "label": "Task 111",
+        "x": 413.224,
+        "y": 325.17
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 3.478
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_112",
+      "location": {
+        "label": "Task 112",
+        "x": 64.479,
+        "y": 373.979
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 3.718
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_113",
+      "location": {
+        "label": "Task 113",
+        "x": 286.989,
+        "y": 122.676
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 4.535
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_114",
+      "location": {
+        "label": "Task 114",
+        "x": 197.537,
+        "y": 309.923
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 4.301
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_115",
+      "location": {
+        "label": "Task 115",
+        "x": 159.109,
+        "y": 357.025
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 3.41
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_116",
+      "location": {
+        "label": "Task 116",
+        "x": 475.1,
+        "y": 117.072
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 7.909
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_117",
+      "location": {
+        "label": "Task 117",
+        "x": 315.386,
+        "y": 220.875
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.66
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_118",
+      "location": {
+        "label": "Task 118",
+        "x": 101.91,
+        "y": 525.764
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 5.638
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_119",
+      "location": {
+        "label": "Task 119",
+        "x": 160.034,
+        "y": 471.19
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 1.843
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_120",
+      "location": {
+        "label": "Task 120",
+        "x": 458.19,
+        "y": 393.393
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 7.202
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_121",
+      "location": {
+        "label": "Task 121",
+        "x": 220.499,
+        "y": 328.647
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 2.742
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_122",
+      "location": {
+        "label": "Task 122",
+        "x": 272.929,
+        "y": 502.651
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 5.105
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_123",
+      "location": {
+        "label": "Task 123",
+        "x": 283.633,
+        "y": 61.584
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.85
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_124",
+      "location": {
+        "label": "Task 124",
+        "x": 291.756,
+        "y": 87.247
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 7.273
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_125",
+      "location": {
+        "label": "Task 125",
+        "x": 214.996,
+        "y": 316.033
+      },
+      "priority": 6.0,
+      "required_sensor": "SAR",
+      "service_duration": 3.842
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_126",
+      "location": {
+        "label": "Task 126",
+        "x": 490.56,
+        "y": 202.909
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 4.586
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_127",
+      "location": {
+        "label": "Task 127",
+        "x": 306.497,
+        "y": 71.054
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 7.682
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_128",
+      "location": {
+        "label": "Task 128",
+        "x": 263.811,
+        "y": 514.014
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 4.635
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_129",
+      "location": {
+        "label": "Task 129",
+        "x": 132.565,
+        "y": 429.104
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 5.024
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_130",
+      "location": {
+        "label": "Task 130",
+        "x": 355.481,
+        "y": 67.831
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 7.187
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_131",
+      "location": {
+        "label": "Task 131",
+        "x": 474.1,
+        "y": 318.322
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 2.167
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_132",
+      "location": {
+        "label": "Task 132",
+        "x": 300.603,
+        "y": 122.312
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 7.339
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_133",
+      "location": {
+        "label": "Task 133",
+        "x": 331.324,
+        "y": 193.415
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 5.464
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_134",
+      "location": {
+        "label": "Task 134",
+        "x": 365.317,
+        "y": 66.203
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 4.114
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_135",
+      "location": {
+        "label": "Task 135",
+        "x": 341.576,
+        "y": 93.151
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 4.42
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_136",
+      "location": {
+        "label": "Task 136",
+        "x": 127.209,
+        "y": 398.754
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.78
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_137",
+      "location": {
+        "label": "Task 137",
+        "x": 419.258,
+        "y": 74.053
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 4.208
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_138",
+      "location": {
+        "label": "Task 138",
+        "x": 286.9,
+        "y": 122.558
+      },
+      "priority": 10.0,
+      "required_sensor": "SAR",
+      "service_duration": 3.379
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_139",
+      "location": {
+        "label": "Task 139",
+        "x": 455.206,
+        "y": 355.827
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 3.251
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_140",
+      "location": {
+        "label": "Task 140",
+        "x": 288.92,
+        "y": 383.428
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 4.843
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_141",
+      "location": {
+        "label": "Task 141",
+        "x": 561.846,
+        "y": 400.536
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 5.897
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_142",
+      "location": {
+        "label": "Task 142",
+        "x": 258.014,
+        "y": 371.191
+      },
+      "priority": 5.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.008
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_143",
+      "location": {
+        "label": "Task 143",
+        "x": 380.023,
+        "y": 71.728
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.631
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_144",
+      "location": {
+        "label": "Task 144",
+        "x": 339.752,
+        "y": 401.233
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 7.56
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_145",
+      "location": {
+        "label": "Task 145",
+        "x": 139.068,
+        "y": 473.4
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 7.716
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_146",
+      "location": {
+        "label": "Task 146",
+        "x": 518.489,
+        "y": 357.458
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 2.935
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_147",
+      "location": {
+        "label": "Task 147",
+        "x": 297.212,
+        "y": 348.93
+      },
+      "priority": 5.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.248
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_148",
+      "location": {
+        "label": "Task 148",
+        "x": 520.633,
+        "y": 382.551
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 4.626
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_149",
+      "location": {
+        "label": "Task 149",
+        "x": 364.695,
+        "y": 206.651
+      },
+      "priority": 9.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.29
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_150",
+      "location": {
+        "label": "Task 150",
+        "x": 489.678,
+        "y": 319.184
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 5.346
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_151",
+      "location": {
+        "label": "Task 151",
+        "x": 467.087,
+        "y": 381.58
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.701
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_152",
+      "location": {
+        "label": "Task 152",
+        "x": 296.024,
+        "y": 181.009
+      },
+      "priority": 9.0,
+      "required_sensor": "EO",
+      "service_duration": 4.16
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_153",
+      "location": {
+        "label": "Task 153",
+        "x": 438.583,
+        "y": 207.048
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 7.118
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_154",
+      "location": {
+        "label": "Task 154",
+        "x": 243.416,
+        "y": 528.884
+      },
+      "priority": 6.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.23
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_155",
+      "location": {
+        "label": "Task 155",
+        "x": 206.026,
+        "y": 466.285
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 2.127
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_156",
+      "location": {
+        "label": "Task 156",
+        "x": 116.621,
+        "y": 497.27
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 5.791
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_157",
+      "location": {
+        "label": "Task 157",
+        "x": 357.813,
+        "y": 116.461
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.904
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_158",
+      "location": {
+        "label": "Task 158",
+        "x": 443.864,
+        "y": 344.424
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 3.116
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_159",
+      "location": {
+        "label": "Task 159",
+        "x": 163.495,
+        "y": 491.732
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 2.838
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_160",
+      "location": {
+        "label": "Task 160",
+        "x": 163.705,
+        "y": 430.851
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 6.917
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_161",
+      "location": {
+        "label": "Task 161",
+        "x": 368.435,
+        "y": 503.651
+      },
+      "priority": 1.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.057
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_162",
+      "location": {
+        "label": "Task 162",
+        "x": 374.254,
+        "y": 482.854
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 3.985
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_163",
+      "location": {
+        "label": "Task 163",
+        "x": 393.345,
+        "y": 494.383
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 1.806
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_164",
+      "location": {
+        "label": "Task 164",
+        "x": 307.398,
+        "y": 76.027
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 6.301
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_165",
+      "location": {
+        "label": "Task 165",
+        "x": 473.546,
+        "y": 430.179
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 7.777
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_166",
+      "location": {
+        "label": "Task 166",
+        "x": 383.977,
+        "y": 102.879
+      },
+      "priority": 6.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.941
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_167",
+      "location": {
+        "label": "Task 167",
+        "x": 123.925,
+        "y": 499.037
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 7.136
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_168",
+      "location": {
+        "label": "Task 168",
+        "x": 188.212,
+        "y": 339.714
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.246
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_169",
+      "location": {
+        "label": "Task 169",
+        "x": 235.088,
+        "y": 415.046
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 5.818
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_170",
+      "location": {
+        "label": "Task 170",
+        "x": 145.821,
+        "y": 183.382
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 3.909
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_171",
+      "location": {
+        "label": "Task 171",
+        "x": 253.639,
+        "y": 121.821
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 1.711
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_172",
+      "location": {
+        "label": "Task 172",
+        "x": 440.79,
+        "y": 331.004
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 7.132
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_173",
+      "location": {
+        "label": "Task 173",
+        "x": 449.279,
+        "y": 357.177
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 5.913
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_174",
+      "location": {
+        "label": "Task 174",
+        "x": 391.683,
+        "y": 138.725
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 1.939
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_175",
+      "location": {
+        "label": "Task 175",
+        "x": 270.006,
+        "y": 423.955
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 3.849
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_176",
+      "location": {
+        "label": "Task 176",
+        "x": 277.631,
+        "y": 455.571
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 7.542
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_177",
+      "location": {
+        "label": "Task 177",
+        "x": 263.713,
+        "y": 352.525
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 5.509
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_178",
+      "location": {
+        "label": "Task 178",
+        "x": 273.761,
+        "y": 70.731
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 7.882
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_179",
+      "location": {
+        "label": "Task 179",
+        "x": 239.387,
+        "y": 432.435
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 1.567
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_180",
+      "location": {
+        "label": "Task 180",
+        "x": 367.675,
+        "y": 444.416
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 2.327
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_181",
+      "location": {
+        "label": "Task 181",
+        "x": 95.415,
+        "y": 413.736
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 4.066
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_182",
+      "location": {
+        "label": "Task 182",
+        "x": 293.785,
+        "y": 458.738
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 4.078
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_183",
+      "location": {
+        "label": "Task 183",
+        "x": 524.687,
+        "y": 379.12
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 2.709
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_184",
+      "location": {
+        "label": "Task 184",
+        "x": 509.29,
+        "y": 305.281
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 2.96
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_185",
+      "location": {
+        "label": "Task 185",
+        "x": 475.523,
+        "y": 344.751
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 3.626
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_186",
+      "location": {
+        "label": "Task 186",
+        "x": 433.872,
+        "y": 313.521
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 6.335
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_187",
+      "location": {
+        "label": "Task 187",
+        "x": 215.468,
+        "y": 285.493
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 1.948
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_188",
+      "location": {
+        "label": "Task 188",
+        "x": 58.904,
+        "y": 500.874
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 7.253
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_189",
+      "location": {
+        "label": "Task 189",
+        "x": 231.722,
+        "y": 427.139
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 4.818
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_190",
+      "location": {
+        "label": "Task 190",
+        "x": 579.764,
+        "y": 507.819
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 1.079
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_191",
+      "location": {
+        "label": "Task 191",
+        "x": 299.921,
+        "y": 466.157
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 7.486
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_192",
+      "location": {
+        "label": "Task 192",
+        "x": 492.176,
+        "y": 377.056
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 7.738
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_193",
+      "location": {
+        "label": "Task 193",
+        "x": 254.528,
+        "y": 445.429
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 5.376
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_194",
+      "location": {
+        "label": "Task 194",
+        "x": 256.902,
+        "y": 381.836
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.761
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_195",
+      "location": {
+        "label": "Task 195",
+        "x": 206.212,
+        "y": 481.119
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 3.091
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_196",
+      "location": {
+        "label": "Task 196",
+        "x": 442.139,
+        "y": 33.902
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.982
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_197",
+      "location": {
+        "label": "Task 197",
+        "x": 252.693,
+        "y": 141.306
+      },
+      "priority": 5.0,
+      "required_sensor": "SAR",
+      "service_duration": 5.212
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_198",
+      "location": {
+        "label": "Task 198",
+        "x": 407.551,
+        "y": 509.703
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 4.88
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_199",
+      "location": {
+        "label": "Task 199",
+        "x": 488.744,
+        "y": 158.056
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 6.466
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_200",
+      "location": {
+        "label": "Task 200",
+        "x": 476.203,
+        "y": 409.082
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 6.0
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_201",
+      "location": {
+        "label": "Task 201",
+        "x": 344.846,
+        "y": 122.714
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 2.588
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_202",
+      "location": {
+        "label": "Task 202",
+        "x": 61.331,
+        "y": 397.522
+      },
+      "priority": 2.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.709
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_203",
+      "location": {
+        "label": "Task 203",
+        "x": 439.036,
+        "y": 111.262
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 4.322
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_204",
+      "location": {
+        "label": "Task 204",
+        "x": 211.15,
+        "y": 47.647
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 6.694
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_205",
+      "location": {
+        "label": "Task 205",
+        "x": 474.173,
+        "y": 365.414
+      },
+      "priority": 2.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.246
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_206",
+      "location": {
+        "label": "Task 206",
+        "x": 287.796,
+        "y": 415.411
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 1.073
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_207",
+      "location": {
+        "label": "Task 207",
+        "x": 465.557,
+        "y": 310.184
+      },
+      "priority": 4.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.023
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_208",
+      "location": {
+        "label": "Task 208",
+        "x": 456.453,
+        "y": 357.967
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.917
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_209",
+      "location": {
+        "label": "Task 209",
+        "x": 175.025,
+        "y": 488.727
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 5.631
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_210",
+      "location": {
+        "label": "Task 210",
+        "x": 432.498,
+        "y": 421.492
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 3.767
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_211",
+      "location": {
+        "label": "Task 211",
+        "x": 261.074,
+        "y": 586.24
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 3.832
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_212",
+      "location": {
+        "label": "Task 212",
+        "x": 294.207,
+        "y": 190.72
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 4.056
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_213",
+      "location": {
+        "label": "Task 213",
+        "x": 465.758,
+        "y": 427.537
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 3.63
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_214",
+      "location": {
+        "label": "Task 214",
+        "x": 187.335,
+        "y": 486.985
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 1.975
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_215",
+      "location": {
+        "label": "Task 215",
+        "x": 482.554,
+        "y": 557.997
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.082
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_216",
+      "location": {
+        "label": "Task 216",
+        "x": 469.1,
+        "y": 282.908
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 4.655
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_217",
+      "location": {
+        "label": "Task 217",
+        "x": 163.247,
+        "y": 346.082
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 2.992
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_218",
+      "location": {
+        "label": "Task 218",
+        "x": 395.418,
+        "y": 117.716
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 7.388
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_219",
+      "location": {
+        "label": "Task 219",
+        "x": 425.017,
+        "y": 459.896
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 7.396
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_220",
+      "location": {
+        "label": "Task 220",
+        "x": 586.906,
+        "y": 160.691
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 2.017
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_221",
+      "location": {
+        "label": "Task 221",
+        "x": 344.468,
+        "y": 148.875
+      },
+      "priority": 10.0,
+      "required_sensor": "IR",
+      "service_duration": 7.881
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_222",
+      "location": {
+        "label": "Task 222",
+        "x": 419.757,
+        "y": 136.819
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 7.393
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_223",
+      "location": {
+        "label": "Task 223",
+        "x": 273.248,
+        "y": 116.906
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 5.263
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_224",
+      "location": {
+        "label": "Task 224",
+        "x": 472.41,
+        "y": 425.926
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 3.801
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_225",
+      "location": {
+        "label": "Task 225",
+        "x": 239.451,
+        "y": 330.401
+      },
+      "priority": 7.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.451
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_226",
+      "location": {
+        "label": "Task 226",
+        "x": 267.493,
+        "y": 75.867
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.902
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_227",
+      "location": {
+        "label": "Task 227",
+        "x": 300.254,
+        "y": 120.035
+      },
+      "priority": 7.0,
+      "required_sensor": "EO",
+      "service_duration": 7.752
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_228",
+      "location": {
+        "label": "Task 228",
+        "x": 433.23,
+        "y": 362.916
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 2.596
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_229",
+      "location": {
+        "label": "Task 229",
+        "x": 269.721,
+        "y": 459.828
+      },
+      "priority": 3.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.403
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_230",
+      "location": {
+        "label": "Task 230",
+        "x": 326.269,
+        "y": 217.416
+      },
+      "priority": 9.0,
+      "required_sensor": "SAR",
+      "service_duration": 4.012
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_231",
+      "location": {
+        "label": "Task 231",
+        "x": 223.835,
+        "y": 337.731
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 5.778
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_232",
+      "location": {
+        "label": "Task 232",
+        "x": 385.982,
+        "y": 494.98
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 6.22
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_233",
+      "location": {
+        "label": "Task 233",
+        "x": 247.834,
+        "y": 489.289
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 5.92
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_234",
+      "location": {
+        "label": "Task 234",
+        "x": 428.656,
+        "y": 349.021
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 2.472
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_235",
+      "location": {
+        "label": "Task 235",
+        "x": 456.266,
+        "y": 17.293
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 3.863
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_236",
+      "location": {
+        "label": "Task 236",
+        "x": 108.732,
+        "y": 441.544
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 2.035
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_237",
+      "location": {
+        "label": "Task 237",
+        "x": 459.21,
+        "y": 69.918
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.662
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_238",
+      "location": {
+        "label": "Task 238",
+        "x": 262.778,
+        "y": 455.693
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 2.362
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_239",
+      "location": {
+        "label": "Task 239",
+        "x": 379.508,
+        "y": 63.585
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 6.898
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_240",
+      "location": {
+        "label": "Task 240",
+        "x": 494.872,
+        "y": 430.799
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.519
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_241",
+      "location": {
+        "label": "Task 241",
+        "x": 15.155,
+        "y": 94.754
+      },
+      "priority": 2.0,
+      "required_sensor": "SAR",
+      "service_duration": 4.05
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_242",
+      "location": {
+        "label": "Task 242",
+        "x": 122.037,
+        "y": 477.592
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 2.88
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_243",
+      "location": {
+        "label": "Task 243",
+        "x": 371.85,
+        "y": 202.164
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 4.502
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_244",
+      "location": {
+        "label": "Task 244",
+        "x": 446.706,
+        "y": 351.078
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 2.486
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_245",
+      "location": {
+        "label": "Task 245",
+        "x": 279.269,
+        "y": 451.109
+      },
+      "priority": 3.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.632
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_246",
+      "location": {
+        "label": "Task 246",
+        "x": 384.954,
+        "y": 135.671
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 5.017
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_247",
+      "location": {
+        "label": "Task 247",
+        "x": 440.395,
+        "y": 562.813
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.404
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_248",
+      "location": {
+        "label": "Task 248",
+        "x": 495.852,
+        "y": 143.549
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 6.049
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_249",
+      "location": {
+        "label": "Task 249",
+        "x": 343.834,
+        "y": 404.372
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 5.924
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_250",
+      "location": {
+        "label": "Task 250",
+        "x": 395.333,
+        "y": 111.169
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 4.032
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_251",
+      "location": {
+        "label": "Task 251",
+        "x": 449.266,
+        "y": 330.911
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.643
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_252",
+      "location": {
+        "label": "Task 252",
+        "x": 369.197,
+        "y": 557.775
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 1.801
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_253",
+      "location": {
+        "label": "Task 253",
+        "x": 503.539,
+        "y": 72.57
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 1.378
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_254",
+      "location": {
+        "label": "Task 254",
+        "x": 561.883,
+        "y": 559.242
+      },
+      "priority": 4.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.057
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_255",
+      "location": {
+        "label": "Task 255",
+        "x": 230.644,
+        "y": 108.582
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 2.303
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_256",
+      "location": {
+        "label": "Task 256",
+        "x": 480.104,
+        "y": 505.17
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 4.844
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_257",
+      "location": {
+        "label": "Task 257",
+        "x": 442.734,
+        "y": 349.389
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 7.233
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_258",
+      "location": {
+        "label": "Task 258",
+        "x": 377.532,
+        "y": 525.715
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 7.919
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_259",
+      "location": {
+        "label": "Task 259",
+        "x": 430.791,
+        "y": 198.302
+      },
+      "priority": 9.0,
+      "required_sensor": "EO",
+      "service_duration": 4.62
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_260",
+      "location": {
+        "label": "Task 260",
+        "x": 495.784,
+        "y": 118.415
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 6.685
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_261",
+      "location": {
+        "label": "Task 261",
+        "x": 328.487,
+        "y": 102.652
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 7.668
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_262",
+      "location": {
+        "label": "Task 262",
+        "x": 402.354,
+        "y": 487.138
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 1.147
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_263",
+      "location": {
+        "label": "Task 263",
+        "x": 562.216,
+        "y": 63.098
+      },
+      "priority": 2.0,
+      "required_sensor": "SAR",
+      "service_duration": 5.224
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_264",
+      "location": {
+        "label": "Task 264",
+        "x": 453.981,
+        "y": 388.476
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 5.211
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_265",
+      "location": {
+        "label": "Task 265",
+        "x": 222.455,
+        "y": 512.638
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 3.052
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_266",
+      "location": {
+        "label": "Task 266",
+        "x": 414.267,
+        "y": 397.727
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 6.16
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_267",
+      "location": {
+        "label": "Task 267",
+        "x": 516.805,
+        "y": 311.758
+      },
+      "priority": 1.0,
+      "required_sensor": "SAR",
+      "service_duration": 7.41
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_268",
+      "location": {
+        "label": "Task 268",
+        "x": 428.121,
+        "y": 71.083
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.49
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_269",
+      "location": {
+        "label": "Task 269",
+        "x": 322.373,
+        "y": 124.967
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 1.694
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_270",
+      "location": {
+        "label": "Task 270",
+        "x": 254.173,
+        "y": 86.175
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 6.265
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_271",
+      "location": {
+        "label": "Task 271",
+        "x": 327.232,
+        "y": 184.19
+      },
+      "priority": 10.0,
+      "required_sensor": "SAR",
+      "service_duration": 6.333
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_272",
+      "location": {
+        "label": "Task 272",
+        "x": 279.25,
+        "y": 217.143
+      },
+      "priority": 10.0,
+      "required_sensor": "IR",
+      "service_duration": 6.72
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_273",
+      "location": {
+        "label": "Task 273",
+        "x": 579.924,
+        "y": 330.473
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 1.663
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_274",
+      "location": {
+        "label": "Task 274",
+        "x": 274.344,
+        "y": 466.484
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 1.792
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_275",
+      "location": {
+        "label": "Task 275",
+        "x": 454.78,
+        "y": 525.085
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 1.606
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_276",
+      "location": {
+        "label": "Task 276",
+        "x": 94.844,
+        "y": 522.443
+      },
+      "priority": 3.0,
+      "required_sensor": "IR",
+      "service_duration": 6.591
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_277",
+      "location": {
+        "label": "Task 277",
+        "x": 499.409,
+        "y": 391.557
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 7.7
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_278",
+      "location": {
+        "label": "Task 278",
+        "x": 236.502,
+        "y": 488.994
+      },
+      "priority": 8.0,
+      "required_sensor": "SAR",
+      "service_duration": 4.202
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_279",
+      "location": {
+        "label": "Task 279",
+        "x": 459.437,
+        "y": 425.545
+      },
+      "priority": 3.0,
+      "required_sensor": "SAR",
+      "service_duration": 3.677
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_280",
+      "location": {
+        "label": "Task 280",
+        "x": 342.681,
+        "y": 466.41
+      },
+      "priority": 8.0,
+      "required_sensor": "EO",
+      "service_duration": 4.696
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_281",
+      "location": {
+        "label": "Task 281",
+        "x": 338.46,
+        "y": 238.733
+      },
+      "priority": 7.0,
+      "required_sensor": "SAR",
+      "service_duration": 2.793
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_282",
+      "location": {
+        "label": "Task 282",
+        "x": 138.381,
+        "y": 355.347
+      },
+      "priority": 1.0,
+      "required_sensor": "EO",
+      "service_duration": 3.151
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_283",
+      "location": {
+        "label": "Task 283",
+        "x": 403.389,
+        "y": 528.475
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 7.261
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_284",
+      "location": {
+        "label": "Task 284",
+        "x": 420.518,
+        "y": 94.446
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 4.941
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_285",
+      "location": {
+        "label": "Task 285",
+        "x": 382.091,
+        "y": 440.685
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 3.362
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_286",
+      "location": {
+        "label": "Task 286",
+        "x": 205.196,
+        "y": 354.291
+      },
+      "priority": 4.0,
+      "required_sensor": "EO",
+      "service_duration": 1.099
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_287",
+      "location": {
+        "label": "Task 287",
+        "x": 275.987,
+        "y": 177.905
+      },
+      "priority": 9.0,
+      "required_sensor": "EO",
+      "service_duration": 2.382
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_288",
+      "location": {
+        "label": "Task 288",
+        "x": 335.877,
+        "y": 121.302
+      },
+      "priority": 8.0,
+      "required_sensor": "IR",
+      "service_duration": 2.023
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_289",
+      "location": {
+        "label": "Task 289",
+        "x": 222.315,
+        "y": 414.129
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 5.801
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_290",
+      "location": {
+        "label": "Task 290",
+        "x": 424.708,
+        "y": 488.093
+      },
+      "priority": 7.0,
+      "required_sensor": "IR",
+      "service_duration": 2.806
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_291",
+      "location": {
+        "label": "Task 291",
+        "x": 462.235,
+        "y": 402.305
+      },
+      "priority": 3.0,
+      "required_sensor": "EO",
+      "service_duration": 7.483
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_292",
+      "location": {
+        "label": "Task 292",
+        "x": 391.215,
+        "y": 458.229
+      },
+      "priority": 2.0,
+      "required_sensor": "EO",
+      "service_duration": 7.165
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_293",
+      "location": {
+        "label": "Task 293",
+        "x": 430.729,
+        "y": 522.529
+      },
+      "priority": 6.0,
+      "required_sensor": "EO",
+      "service_duration": 7.399
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_294",
+      "location": {
+        "label": "Task 294",
+        "x": 104.653,
+        "y": 516.85
+      },
+      "priority": 2.0,
+      "required_sensor": "IR",
+      "service_duration": 5.803
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_295",
+      "location": {
+        "label": "Task 295",
+        "x": 384.57,
+        "y": 475.246
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 6.816
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_296",
+      "location": {
+        "label": "Task 296",
+        "x": 501.703,
+        "y": 405.505
+      },
+      "priority": 1.0,
+      "required_sensor": "IR",
+      "service_duration": 5.962
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_297",
+      "location": {
+        "label": "Task 297",
+        "x": 426.296,
+        "y": 464.705
+      },
+      "priority": 5.0,
+      "required_sensor": "IR",
+      "service_duration": 7.455
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_298",
+      "location": {
+        "label": "Task 298",
+        "x": 498.844,
+        "y": 407.71
+      },
+      "priority": 6.0,
+      "required_sensor": "IR",
+      "service_duration": 5.842
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_299",
+      "location": {
+        "label": "Task 299",
+        "x": 311.623,
+        "y": 462.734
+      },
+      "priority": 5.0,
+      "required_sensor": "EO",
+      "service_duration": 4.104
+    },
+    {
+      "deadline": null,
+      "earliest_start": null,
+      "id": "TASK_300",
+      "location": {
+        "label": "Task 300",
+        "x": 225.569,
+        "y": 453.152
+      },
+      "priority": 4.0,
+      "required_sensor": "IR",
+      "service_duration": 1.751
+    }
+  ],
+  "uavs": [
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_01",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 20.727
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_02",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 30.936
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_03",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "SAR"
+      ],
+      "speed": 27.289
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_04",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "IR"
+      ],
+      "speed": 24.796
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_05",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 18.985
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_06",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "SAR"
+      ],
+      "speed": 23.131
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_07",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "SAR"
+      ],
+      "speed": 29.077
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_08",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "IR"
+      ],
+      "speed": 22.26
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_09",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 27.522
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_10",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 23.31
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_11",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 27.365
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_12",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 25.491
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_13",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "SAR"
+      ],
+      "speed": 23.035
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_14",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 31.799
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_15",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 23.665
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_16",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 25.967
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_17",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 25.146
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_18",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 27.568
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_19",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 26.059
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_20",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 24.192
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_21",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "SAR"
+      ],
+      "speed": 28.843
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_22",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "SAR"
+      ],
+      "speed": 30.942
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_23",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 25.663
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_24",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 30.383
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_25",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "SAR"
+      ],
+      "speed": 25.705
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_26",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 27.507
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_27",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 21.5
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_28",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "IR"
+      ],
+      "speed": 21.421
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_29",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 20.465
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_30",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 26.582
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_31",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 21.339
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_32",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 25.733
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_33",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 22.034
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_34",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "IR"
+      ],
+      "speed": 18.761
+    },
+    {
+      "home_base_id": "BASE_5",
+      "id": "UAV_35",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 27.309
+    },
+    {
+      "home_base_id": "BASE_6",
+      "id": "UAV_36",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 24.263
+    },
+    {
+      "home_base_id": "BASE_1",
+      "id": "UAV_37",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "SAR"
+      ],
+      "speed": 29.525
+    },
+    {
+      "home_base_id": "BASE_2",
+      "id": "UAV_38",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 20.925
+    },
+    {
+      "home_base_id": "BASE_3",
+      "id": "UAV_39",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO"
+      ],
+      "speed": 22.203
+    },
+    {
+      "home_base_id": "BASE_4",
+      "id": "UAV_40",
+      "maximum_mission_duration": null,
+      "sensors": [
+        "EO",
+        "IR"
+      ],
+      "speed": 20.85
+    }
+  ]
+}
