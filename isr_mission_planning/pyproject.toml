@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "isr-mission-planning"
+version = "0.1.0"
+description = "Reproducible scaffolding for heterogeneous UAV ISR mission planning"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["matplotlib>=3.7", "numpy>=2.0", "PyYAML>=6.0", "scipy>=1.15"]
+
+[project.optional-dependencies]
+dev = ["jupyterlab>=4.0", "nbconvert>=7.0", "ipykernel>=6.0", "pandas>=2.0", "pytest>=7.4"]
+
+[project.scripts]
+isr-mission-planning = "isr_mission_planning.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/isr_mission_planning"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
