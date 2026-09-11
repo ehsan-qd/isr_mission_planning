@@ -1,0 +1,33 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  gui:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: isr_gui
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: isr_gui/package-lock.json
+      - run: npm ci
+      - run: npm run check
+  planner:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: isr_mission_planning
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.11.24'
+      - run: uv sync --locked --extra dev
+      - run: uv run --locked pytest
+      - run: uv run --locked isr-mission-planning solve --scenario data/scenarios/small/small_seed_42.json --solver greedy --no-figures
+      - run: uv build
