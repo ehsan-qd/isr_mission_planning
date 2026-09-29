@@ -7,10 +7,11 @@ import { AmbientNetwork } from "./AmbientNetwork";
 import { AnimatedUAVMap } from "./AnimatedUAVMap";
 import { BrandMark } from "./BrandMark";
 import { FullscreenButton } from "./FullscreenButton";
+import { InstanceDifficulty } from "./InstanceDifficulty";
 import { MissionGantt } from "./MissionGantt";
 import { MissionMap } from "./MissionMap";
 
-const slides = ["The mission", "The instance", "The method", "The plan", "Across seeds", "Capability demonstrated", "QUBO appendix", "Questions"];
+const slides = ["The mission", "The instance", "The method", "The plan", "Across seeds", "Capability and next trial", "QUBO appendix", "Questions"];
 const scaleOptions: Scale[] = ["small", "medium", "large"];
 
 const fmt = (value: number, digits = 1) => value.toFixed(digits);
@@ -31,16 +32,46 @@ function Pipeline() {
   ].map(([n,title,text])=><div key={n}><small>{n}</small><strong>{title}</strong><span>{text}</span></div>)}</div>;
 }
 
-function SeedTable({ instances }: { instances: MissionInstance[] }) {
-  return <div className="seed-table"><div className="seed-head"><span>Seed</span><span>Greedy</span><span>Hybrid pipeline</span><span>Distance Δ</span><span>Outcome</span></div>{instances.map((item) => {
-    const greedy = item.benchmarks.greedy;
-    const orbit = item.benchmarks.orbit_hybrid;
-    const makespanDelta = delta(orbit.makespan, greedy.makespan);
-    const distanceDelta = delta(orbit.total_distance, greedy.total_distance);
-    const fallbackUsed = Boolean(item.plan.metadata.greedy_fallback_used);
-    const outcome = fallbackUsed ? "Greedy safety fallback" : makespanDelta < 0 ? "Shorter makespan" : makespanDelta > 0 ? "Longer makespan" : "Same makespan";
-    return <div className="seed-row" key={item.seed}><strong>{item.seed}</strong><span>{fmt(greedy.makespan)} min</span><span>{fmt(orbit.makespan)} min</span><span className={distanceDelta < 0 ? "lower" : "higher"}>{distanceDelta > 0 ? "+" : ""}{fmt(distanceDelta)}%</span><span className={makespanDelta <= 0 ? "lower" : "higher"}>{outcome}</span></div>;
-  })}</div>;
+function changeText(value: number) {
+  const rounded = Number(value.toFixed(1));
+  return `${rounded > 0 ? "+" : ""}${rounded.toFixed(1)}%`;
+}
+
+function changeClass(value: number) {
+  const rounded = Number(value.toFixed(1));
+  return rounded < 0 ? "lower" : rounded > 0 ? "higher" : "";
+}
+
+function ResultsMetric({ instances, metric, title, unit, description, meanChange }: {
+  instances: MissionInstance[];
+  metric: "makespan" | "total_distance";
+  title: string;
+  unit: string;
+  description: string;
+  meanChange: number;
+}) {
+  const formatValue = (value: number) => value.toLocaleString("en-GB", {
+    minimumFractionDigits: metric === "makespan" ? 1 : 0,
+    maximumFractionDigits: metric === "makespan" ? 1 : 0,
+  });
+  return <section className="results-metric panel" aria-label={`${title} comparison`}>
+    <header><h3>{title} <span>{unit}</span></h3><p>{description}</p></header>
+    <table aria-label={`${title} by seed (${unit})`}>
+      <thead><tr><th scope="col">Seed</th><th scope="col">Greedy</th><th scope="col" className="results-orbit">ORBIT</th><th scope="col">Change</th></tr></thead>
+      <tbody>{instances.map((item) => {
+        const greedyValue = item.benchmarks.greedy[metric];
+        const orbitValue = item.benchmarks.orbit_hybrid[metric];
+        const change = delta(orbitValue, greedyValue);
+        return <tr key={item.seed}>
+          <th scope="row">{item.seed}</th>
+          <td>{formatValue(greedyValue)}</td>
+          <td className="results-orbit">{formatValue(orbitValue)}</td>
+          <td className={changeClass(change)}>{changeText(change)}</td>
+        </tr>;
+      })}</tbody>
+    </table>
+    <footer><span>Change in mean {title.toLowerCase()}</span><strong className={changeClass(meanChange)}>{changeText(meanChange)}</strong></footer>
+  </section>;
 }
 
 export function MissionShowcase() {
@@ -81,10 +112,6 @@ export function MissionShowcase() {
 
   const orbit = instance.benchmarks.orbit_hybrid;
   const greedy = instance.benchmarks.greedy;
-  const featuredScale: Scale = evidence.scales.large?.instances.length ? "large" : "medium";
-  const maximumVariables = Math.max(...evidence.scales.large.instances.map((item) => Number(item.plan.metadata.number_of_pbits ?? 0)));
-  const feasiblePlans = Object.values(evidence.scales).flatMap((entry) => entry.instances).filter((item) => item.validation.feasible).length;
-  const totalPlans = Object.values(evidence.scales).flatMap((entry) => entry.instances).length;
   const avgUtilisation = Object.values(instance.validation.metrics.uav_utilisation).reduce((a,b)=>a+b,0) / Object.keys(instance.validation.metrics.uav_utilisation).length;
 
   return <main className="showcase-shell" data-slide={slide}>
@@ -92,21 +119,74 @@ export function MissionShowcase() {
     <header className="topbar">
       <div className="brand"><BrandMark/><div><strong>ORBIT ISR Mission Planning</strong><span>Assign. Sequence. Validate.</span></div></div>
       <nav className="progress" aria-label="Demonstration progress">{slides.map((label,index)=><button key={label} className={index===slide?"active":index<slide?"complete":""} aria-current={index===slide?"step":undefined} aria-label={`Go to ${index+1}. ${label}`} onClick={()=>navigate(index)}><span/></button>)}</nav>
-      <div className="top-actions"><Link className="view-link" href="/game">Play Loss of Signal</Link><Link className="view-link" href="/presentation">Capability briefing</Link><FullscreenButton/><span className="replay"><i/>RECORDED · SOFTWARE SIMULATOR</span><div className="segmented"><button aria-pressed={!technical} onClick={()=>setTechnical(false)}>Executive</button><button aria-pressed={technical} onClick={()=>setTechnical(true)}>Technical</button></div></div>
+      <div className="top-actions">
+        <FullscreenButton/>
+        <div className="segmented" role="group" aria-label="Detail level">
+          <button aria-pressed={!technical} onClick={()=>setTechnical(false)}>Executive</button>
+          <button aria-pressed={technical} onClick={()=>setTechnical(true)}>Technical</button>
+        </div>
+      </div>
     </header>
 
     <section className="frame" key={`${slide}-${scale}-${seed}`}>
-      {slide === 0 && <div className="slide title-slide"><div className="eyebrow">Probabilistic optimisation for ISR</div><h1>Turn collection demand<br/>into a flyable mission.</h1><p>Heterogeneous UAVs. Sensor-constrained Mission Task Elements. One plan that assigns every MTE, sequences every route, and returns every aircraft home.</p><div className="simple-flow">{[["01","Observe"],["02","Assign"],["03","Sequence"],["04","Validate"]].map(([n,t])=><div key={n}><small>{n}</small><strong>{t}</strong></div>)}</div><button className="button primary" onClick={()=>navigate(1)}>Show the mission <span>→</span></button></div>}
+      {slide === 0 && <div className="slide title-slide">
+        <div className="eyebrow">Smarter mission planning</div>
+        <h1>Turn complex missions<br/>into clear plans.</h1>
+        <p>Heterogeneous UAVs. Sensor-constrained Mission Task Elements. One plan that assigns every MTE, sequences every route, and returns every aircraft home.</p>
+        <div className="simple-flow">{[["01","Define tasks"],["02","Assign aircraft"],["03","Plan routes"],["04","Review plan"]].map(([n,t])=><div key={n}><small>{n}</small><strong>{t}</strong></div>)}</div>
+        <button className="button primary" onClick={()=>navigate(1)}>Explore a mission <span>→</span></button>
+      </div>}
 
-      {slide === 1 && <div className="slide"><header className="heading"><div><div className="eyebrow">1 · The instance</div><h2>One operating area.<br/>Many coupled decisions.</h2></div><div className="selectors"><div className="segmented">{availableScales.map((option)=><button key={option} aria-pressed={scale===option} onClick={()=>{setScale(option);setSeed(42);setSelectedUav("")}}>{option[0].toUpperCase()+option.slice(1)}</button>)}</div><select value={seed} onChange={(e)=>{setSeed(Number(e.target.value));setSelectedUav("")}} aria-label="Scenario seed">{instances.map((item)=><option key={item.seed} value={item.seed}>Seed {item.seed}</option>)}</select></div></header><div className="map-layout"><div className="map-panel panel"><MissionMap scenario={instance.scenario} plan={instance.plan} planned={false}/><div className="map-legend"><span><i className="base-key"/>Bases</span><span><i className="task-key"/>Mission Task Elements</span><span><i className="topology-key"/>BattleLab-inspired synthetic topology</span><span>{instance.scenario.operating_area.width} × {instance.scenario.operating_area.height} km</span></div></div><div className="metric-stack"><Metric label="Mission Task Elements" value={String(instance.scenario.tasks.length)} note="Each collection action is assigned exactly once"/><Metric label="UAVs" value={String(instance.scenario.uavs.length)} note={`${new Set(instance.scenario.uavs.flatMap(u=>u.sensors)).size} sensor types across the fleet`}/><Metric label="Home bases" value={String(instance.scenario.bases.length)}/><Metric label="Decision seed" value={String(seed)} note="Deterministic scenario generation"/></div></div></div>}
+      {slide === 1 && <div className="slide instance-slide"><header className="heading"><div><div className="eyebrow">1 · The instance</div><h2>One operating area.<br/>Many coupled decisions.</h2></div><div className="selectors"><div className="segmented">{availableScales.map((option)=><button key={option} aria-pressed={scale===option} onClick={()=>{setScale(option);setSeed(42);setSelectedUav("")}}>{option[0].toUpperCase()+option.slice(1)}</button>)}</div><select value={seed} onChange={(e)=>{setSeed(Number(e.target.value));setSelectedUav("")}} aria-label="Scenario seed">{instances.map((item)=><option key={item.seed} value={item.seed}>Seed {item.seed}</option>)}</select></div></header><div className="map-layout"><div className="map-panel panel"><MissionMap scenario={instance.scenario} plan={instance.plan} planned={false}/><div className="map-legend"><span><i className="base-key"/>Bases</span><span><i className="task-key"/>Mission Task Elements</span><span><i className="topology-key"/>BattleLab-inspired synthetic topology</span><span>{instance.scenario.operating_area.width} × {instance.scenario.operating_area.height} km</span></div></div><aside className="instance-sidebar" aria-label="Instance summary">
+            <dl className="instance-facts panel">
+              <div><dt title="Mission Task Elements">MTEs</dt><dd>{instance.scenario.tasks.length}</dd></div>
+              <div><dt>UAVs</dt><dd>{instance.scenario.uavs.length}</dd></div>
+              <div><dt>Home bases</dt><dd>{instance.scenario.bases.length}</dd></div>
+            </dl>
+            <InstanceDifficulty instance={instance}/>
+          </aside></div></div>}
 
       {slide === 2 && <div className="slide centred"><div className="eyebrow">2 · The method</div><h2>Probabilistic assignment.<br/>Deterministic mission completion.</h2><p className="lede">The QUBO covers sensor-feasible MTE assignment through a load-balancing surrogate. Sequencing, timing, repair, and validation remain classical.</p><Pipeline/><div className="number-grid"><Metric label="Eligible assignment variables" value={String(instance.plan.metadata.number_of_pbits ?? "—")} note="Binary QUBO for this instance"/><Metric label="Samples" value={Number(instance.plan.metadata.number_of_samples ?? 0).toLocaleString()}/><Metric label="Assignment repairs" value={String(instance.plan.metadata.assignment_repairs ?? "—")} note="For the displayed saved plan"/></div>{technical && <div className="technical-note">{String(instance.plan.metadata.seed_note)} Requested seed: {String(instance.plan.metadata.requested_seed)} · applied by SDK: {String(instance.plan.metadata.seed_applied)}.</div>}</div>}
 
-      {slide === 3 && <div className="slide"><header className="heading"><div><div className="eyebrow">3 · The plan</div><h2>Every MTE assigned.<br/>Every route brought home.</h2></div><div className="plan-heading-actions"><label className="showcase-uav-select tactical-select"><span>Focus aircraft</span><select aria-label="Focus aircraft" value={effectiveUav} onChange={(event)=>setSelectedUav(event.target.value)}>{activeUavs.map((route)=><option key={route.uav_id} value={route.uav_id}>{route.uav_id}</option>)}</select></label><span className="status">✓ independently feasible</span></div></header><div className="plan-layout"><div className="showcase-replay-map"><AnimatedUAVMap key={`${instance.scenario.scenario_id}-${effectiveUav}`} scenario={instance.scenario} plan={instance.plan} expandable selectedUav={effectiveUav}/></div><div className="plan-details"><div className="metric-row"><Metric label="Mission makespan" value={`${fmt(instance.plan.mission_end_time)} min`}/><Metric label="Travel distance" value={`${fmt(instance.validation.metrics.total_travel_distance,0)} km`}/><Metric label="Mean utilisation" value={pct(avgUtilisation)}/></div><div className="panel gantt-panel"><div className="panel-kicker">Scheduled service by aircraft</div><MissionGantt plan={instance.plan}/></div><div className="warning-note"><strong>{instance.validation.metrics.number_of_conflicts} separation warnings</strong><span>Detected after solving; deconfliction is not yet inside the optimisation.</span></div></div></div></div>}
+      {slide === 3 && <div className="slide"><header className="heading"><div><div className="eyebrow">3 · The plan</div><h2>Every MTE assigned.<br/>Every route brought home.</h2></div><div className="plan-heading-actions"><label className="showcase-uav-select tactical-select"><span>Focus aircraft</span><select aria-label="Focus aircraft" value={effectiveUav} onChange={(event)=>setSelectedUav(event.target.value)}>{activeUavs.map((route)=><option key={route.uav_id} value={route.uav_id}>{route.uav_id}</option>)}</select></label><span className="status">✓ independently feasible</span></div></header><div className="plan-layout"><div className="showcase-replay-map"><AnimatedUAVMap key={`${instance.scenario.scenario_id}-${effectiveUav}`} scenario={instance.scenario} plan={instance.plan} expandable selectedUav={effectiveUav}/></div><div className="plan-details"><div className="metric-row"><Metric label="Mission makespan" value={`${fmt(instance.plan.mission_end_time)} min`}/><Metric label="Distance travelled" value={`${fmt(instance.validation.metrics.total_travel_distance,0)} km`}/><Metric label="Mean utilisation" value={pct(avgUtilisation)}/></div><div className="panel gantt-panel"><div className="panel-kicker">Scheduled service by aircraft</div><MissionGantt plan={instance.plan}/></div><div className="warning-note"><strong>{instance.validation.metrics.number_of_conflicts} separation warnings</strong><span>Detected after solving; deconfliction is not yet inside the optimisation.</span></div></div></div></div>}
 
-      {slide === 4 && <div className="slide"><header className="heading"><div><div className="eyebrow">4 · Across seeds</div><h2>A result is not<br/>a single lucky run.</h2></div><p>Same scale · {instances.length} generated instances · identical solver configuration</p></header><SeedTable instances={instances}/><div className="comparison-strip"><div><span>Mean makespan change</span><strong className={aggregate.makespan<0?"lower":"higher"}>{aggregate.makespan>0?"+":""}{fmt(aggregate.makespan)}%</strong><small>ORBIT hybrid vs greedy</small></div><div><span>Mean travel-distance change</span><strong className={aggregate.distance<0?"lower":"higher"}>{aggregate.distance>0?"+":""}{fmt(aggregate.distance)}%</strong><small>ORBIT hybrid vs greedy</small></div><div><span>Feasible saved plans</span><strong>{instances.filter((item)=>item.validation.feasible).length} / {instances.length}</strong><small>Independent validation</small></div></div><div className="plain-note">For these synthetic {scale} instances, the route-aware hybrid {aggregate.makespan < 0 ? "shortens mean makespan" : "uses the greedy safety fallback when needed"} and {aggregate.distance < 0 ? "reduces mean travel distance" : "makes the distance trade-off explicit"}. Results remain instance-specific.</div></div>}
+      {slide === 4 && <div className="slide results-slide">
+        <header className="heading">
+          <div><div className="eyebrow">4 · Results across seeds</div><h2>ORBIT vs greedy.</h2></div>
+          <p>{scale[0].toUpperCase() + scale.slice(1)} · {instance.scenario.tasks.length} MTEs · {instance.scenario.uavs.length} UAVs · {instances.length} seeds</p>
+        </header>
+        <div className="results-guide">Lower is better <span>Percentage change: ORBIT vs greedy</span></div>
+        <div className="results-grid">
+          <ResultsMetric instances={instances} metric="makespan" title="Makespan" unit="min" description="Time until the last UAV returns" meanChange={aggregate.makespan}/>
+          <ResultsMetric instances={instances} metric="total_distance" title="Distance travelled" unit="km" description="Total distance across the fleet" meanChange={aggregate.distance}/>
+        </div>
+        <div className="results-note"><span><strong>{instances.filter((item)=>item.validation.feasible).length} / {instances.length}</strong> saved plans validated</span><span>Recorded software-simulator results</span></div>
+      </div>}
 
-      {slide === 5 && <div className="slide centred final-slide"><div className="eyebrow">5 · Capability demonstrated</div><h2>Complex decisions.<br/>Defensible mission plans.</h2><p className="lede">The result is more than a solver sample: it is an end-to-end path from a constrained decision space to routes that can be inspected, compared, and independently checked.</p><div className="pdit-grid capability-grid"><article className="panel"><span>Large-case decision model</span><strong>{maximumVariables.toLocaleString()}</strong><small>eligible assignment variables</small><b>300 MTEs · 40 UAVs</b></article><div className="versus">+</div><article className="panel featured"><span>Recorded assurance</span><strong>{feasiblePlans} / {totalPlans}</strong><small>independently feasible plans</small><b>Safety fallback retained</b></article></div><div className="evidence-boundary"><strong>Next proof point</strong><span>Representative mission data, operational constraints, user evaluation, and hardware-in-the-loop execution.</span></div><div className="cta-row"><button className="button" onClick={()=>{setSlide(1);setScale(featuredScale);setSeed(42);setSelectedUav("")}}>Explore {featuredScale} instance</button><Link className="button primary" href="/presentation">Open capability briefing</Link></div></div>}
+
+      {slide === 5 && <div className="slide proof-slide">
+        <header className="heading"><div><div className="eyebrow">5 · Capability and next trial</div><h2>A <strong>reusable approach</strong> to<br/>assignment, scheduling and planning.</h2></div></header>
+        <div className="proof-columns">
+          <section className="panel proof-demonstrated" aria-labelledby="demonstrated-title">
+            <header><h3 id="demonstrated-title">Demonstrated approach</h3><p>ISR example: QUBO assignment + classical scheduling</p></header>
+            <ul>
+              <li><span>Represent <strong>tasks, resources and eligibility</strong></span></li>
+              <li><span><strong>Optimise assignments;</strong> sequence and validate</span></li>
+              <li><span><strong>Benchmark plan quality</strong> against a baseline</span></li>
+            </ul>
+          </section>
+          <section className="panel" aria-labelledby="validate-title">
+            <header><h3 id="validate-title">Next to validate</h3><p>Adapt the formulation and constraints to each use case</p></header>
+            <ul>
+              <li><span><strong>Assignment</strong> · teams, machines and assets</span></li>
+              <li><span><strong>Scheduling</strong> · jobs, shifts and maintenance</span></li>
+              <li><span><strong>Planning</strong> · logistics, fleets and operations</span></li>
+            </ul>
+          </section>
+        </div>
+        <div className="proof-trial"><span>Next trial</span><p>Formulate your planning problem and <strong>compare ORBIT</strong> with your current approach.</p></div>
+      </div>}
+
 
       {slide === 6 && <div className="slide qubo-appendix"><div className="eyebrow">6 · Technical appendix</div><h2>Inside the assignment QUBO.</h2><div className="qubo-equation"><span>MINIMISE</span><strong>E(x) = x<sup>T</sup>Qx</strong><em>x<sub>u,t</sub> ∈ &#123;0, 1&#125;</em></div><div className="qubo-terms"><article><b>x<sub>u,t</sub></b><strong>Assignment bit</strong><span>1 when UAV u performs MTE t. Incompatible sensor pairings are omitted.</span></article><article><b>A(Σx − 1)²</b><strong>Penalty</strong><span>Makes exactly one eligible UAV per MTE the lowest-energy choice.</span></article><article><b>Q<sub>ij</sub></b><strong>Coupling</strong><span>Links assignment pairs through shared workload and geographic compactness.</span></article><article><b>E(x)</b><strong>Energy</strong><span>The score sampled by ORBIT: lower energy means a more promising assignment.</span></article></div><div className="qubo-boundary"><strong>QUBO</strong><span>assigns MTEs</span><i>→</i><strong>Classical stages</strong><span>sequence, time and validate routes</span></div></div>}
 

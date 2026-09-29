@@ -24,6 +24,15 @@ use the same control or `Esc` to exit.
 The UI uses **Mission Task Element (MTE)** for the indivisible planning unit: one collection action
 at a location with a required sensor and service duration, assigned to exactly one eligible UAV.
 
+The instance selection screen shows an estimated solve difficulty alongside the assignment
+search-space size for the selected size and seed. The combination count multiplies the number
+of sensor-compatible UAVs for each MTE, assigning every MTE exactly once. It excludes route
+ordering, timing and other mission constraints. Large counts use approximate scientific notation;
+the count does not imply exhaustive search by the solver. Difficulty is a model-size heuristic:
+low below 100 sensor-compatible UAV–MTE assignment variables, moderate from 100 to 999,
+and high from 1,000. These display bands are not a calibrated measure of optimisation hardness
+or a time-to-optimality claim.
+
 ## Refresh measured evidence
 
 The checked-in `public/recorded/mission-evidence.json` is sufficient for startup.
