@@ -6,8 +6,8 @@ import { RecordedDemonstrator } from "@/components/RecordedDemonstrator";
 import "./demonstrator.css";
 
 export const metadata: Metadata = {
-  title: "Recorded Demonstrator | ORBIT ISR Mission Planning",
-  description: "A 2 minute 45 second guided replay of the large ISR instance, measured results and mission bottleneck.",
+  title: "ISR mission | Quantum Dice",
+  description: "A guided mission replay showing aircraft routes, measured results and the mission bottleneck.",
 };
 
 export default async function DemonstratorPage() {
