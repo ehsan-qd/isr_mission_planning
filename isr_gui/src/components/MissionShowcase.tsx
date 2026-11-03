@@ -120,6 +120,7 @@ export function MissionShowcase() {
       <div className="brand"><BrandMark/><div><strong>ORBIT ISR Mission Planning</strong><span>Assign. Sequence. Validate.</span></div></div>
       <nav className="progress" aria-label="Demonstration progress">{slides.map((label,index)=><button key={label} className={index===slide?"active":index<slide?"complete":""} aria-current={index===slide?"step":undefined} aria-label={`Go to ${index+1}. ${label}`} onClick={()=>navigate(index)}><span/></button>)}</nav>
       <div className="top-actions">
+        <Link className="view-link" href="/demonstrator">Watch 2:45 demo</Link>
         <FullscreenButton/>
         <div className="segmented" role="group" aria-label="Detail level">
           <button aria-pressed={!technical} onClick={()=>setTechnical(false)}>Executive</button>

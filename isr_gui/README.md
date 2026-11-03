@@ -63,6 +63,32 @@ Once all inputs are available, run `npm run sync:recorded` from `isr_gui/` and
 review the fixture diff. Benchmark rows and displayed plans come from separate
 stochastic solves, so their makespans need not be identical.
 
+## Recorded demonstrator — `/demonstrator`
+
+Open `/demonstrator` on the same local server (for example,
+<http://localhost:3000/demonstrator> with the default port). It auto-plays a
+2 minute 45 second captioned replay of the saved large seed 42 mission:
+
+- 0:00–0:38: the 300-task, 40-UAV problem and sensor-compatible assignment space.
+- 0:38–0:58: QUBO sampling, deterministic route processing, fallback and validation.
+- 0:58–2:45: benchmark improvements, timed aircraft replay, collection dwell,
+  the longest-return bottleneck, and the three saved large-instance outcomes.
+
+Pause, restart, seek, jump to chapters, loop, fast-forward at 2×, 4× or 8×, or
+use full screen. Space toggles playback, arrows seek ten seconds, 1/2/4/8 set
+the speed and R restarts. The story clock freezes in a
+hidden tab. Aircraft and completed-task markers use the saved route timestamps;
+pausing the story also freezes the mission replay. Choose an aircraft in chapter
+five or select a schedule row in chapter six to inspect another route.
+
+This is a deterministic browser replay of recorded solver evidence, with timed
+captions and no audio track, not a video file or a live solve. The final chapter
+shows simulator runtime, remaining separation warnings and the greedy fallback
+case. The assignment-space count excludes route ordering and timing. Distance is
+shown in the scenario's abstract units. No optimality or hardware claim is made.
+
+`npm run test:demonstrator` checks the timing, saved evidence and route interpolation.
+
 ## Map surface
 
 The 2D mission map uses `public/assets/battlelab-terrain-v1.png`, a synthetic, non-operational

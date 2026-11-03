@@ -9,7 +9,8 @@
     "lint": "eslint",
     "sync:recorded": "python3 scripts/export_results.py",
     "test:game": "node --experimental-strip-types --test tests/game.test.mjs",
-    "check": "npm run lint && npm run test:game && npm run build"
+    "test:demonstrator": "node --experimental-strip-types --test tests/demonstrator.test.mjs",
+    "check": "npm run lint && npm run test:game && npm run test:demonstrator && npm run build"
   },
   "dependencies": {
     "next": "16.3.4",
