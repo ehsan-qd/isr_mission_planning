@@ -142,7 +142,7 @@ export function RecordedDemonstrator({ instance, comparisons }: { instance: Miss
 
   return <main className="recorded-demo" data-chapter={chapter}>
     <AmbientNetwork/>
-    <header className="demo-topbar"><div className="demo-brand"><BrandMark/><strong>ISR mission</strong></div><div className="demo-header-actions"><Link className="view-link" href="/">Explore ↗</Link><FullscreenButton/></div></header>
+    <header className="demo-topbar"><div className="demo-brand"><BrandMark/><strong>ISR Mission Planning</strong></div><div className="demo-header-actions"><Link className="view-link" href="/">Explore ↗</Link><FullscreenButton/></div></header>
     <div className="demo-body">
       <header className="demo-heading"><h1 key={chapter}>{scene.title}</h1></header>
       <div className="demo-stage">

@@ -6,7 +6,7 @@ import { RecordedDemonstrator } from "@/components/RecordedDemonstrator";
 import "./demonstrator.css";
 
 export const metadata: Metadata = {
-  title: "ISR mission | Quantum Dice",
+  title: "ISR Mission Planning | Quantum Dice",
   description: "A guided mission replay showing aircraft routes, measured results and the mission bottleneck.",
 };
 
