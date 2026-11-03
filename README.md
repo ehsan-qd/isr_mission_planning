@@ -29,6 +29,12 @@ used `isr_gui` as its root, clear that setting before redeploying. Leave the
 project-level framework and build overrides unset: the root `vercel.json` selects
 Next.js for the `isr_gui` service.
 
+The GUI pins Node.js to major version 22, matching `.nvmrc` and CI. Its Next.js
+configuration leaves output packaging to Vercel's adapter. Do not enable
+`output: "standalone"` for this deployment: with Next.js 16.3 adapter builds it
+tries to copy a `next-server.js.nft.json` file that the adapter build does not emit.
+Local production serving still uses `npm run build` followed by `npm start`.
+
 This uses Vercel's services configuration with one deployed service:
 
 | Service | Directory | Public routing | Bindings |
