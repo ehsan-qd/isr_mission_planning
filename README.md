@@ -21,6 +21,43 @@ Open <http://localhost:3000> (showcase), <http://localhost:3000/presentation> (b
 
 For a production build, run `npm run build`, then `npm start` from `isr_gui`.
 
+## Deploy the demonstrator on Vercel
+
+Import `ehsan-qd/isr_mission_planning` into Vercel and set the project's **Root
+Directory to the repository root (`.`)**, not `isr_gui`. If the project previously
+used `isr_gui` as its root, clear that setting before redeploying. Leave the
+project-level framework and build overrides unset: the root `vercel.json` selects
+Next.js for the `isr_gui` service.
+
+This uses Vercel's services configuration with one deployed service:
+
+| Service | Directory | Public routing | Bindings |
+| --- | --- | --- | --- |
+| `isr_gui` | `isr_gui/` | All paths through the `/(.*)` rewrite | None |
+
+The Python planner remains a local CLI and is not deployed as an HTTP service.
+The GUI reads its bundled recorded evidence; it needs no backend URL, service
+binding or environment variable. The rewrite preserves existing paths, including
+`/demonstrator`, `/presentation`, `/game`, `/recorded/*` and `/_next/*`.
+
+After deployment, share `https://<your-production-domain>/demonstrator`. Set the
+Vercel project's deployment protection to match the intended audience. The route
+configuration sends traffic to the GUI; it does not override project access rules.
+
+Test the same service routing locally from the repository root:
+
+```bash
+npx vercel@65.10.0 dev --local --listen 127.0.0.1:3012
+```
+
+Open <http://127.0.0.1:3012/demonstrator>. Stop an existing `next dev` process for
+this checkout before starting this command, because Next.js allows one development
+server per build directory. Use Ctrl-C to stop the Vercel development server.
+Local mode does not require linking a Vercel account. For a linked project's
+environment settings, use `vercel dev` without `--local`.
+
+Configuration reference: [Vercel Services](https://vercel.com/docs/services).
+
 ## Run the planner
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then from the repository root:

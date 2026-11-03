@@ -5,6 +5,7 @@
 !.env.example
 .vscode/
 .idea/
+.vercel/
 *.log
 
 # JavaScript
