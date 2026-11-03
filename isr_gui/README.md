@@ -71,8 +71,10 @@ Open `/demonstrator` on the same local server (for example,
 
 - 0:00–0:38: the 300-task, 40-UAV problem and sensor-compatible assignment space.
 - 0:38–0:58: QUBO sampling, deterministic route processing, fallback and validation.
-- 0:58–2:45: benchmark improvements, timed aircraft replay, collection dwell,
-  the longest-return bottleneck, and the three saved large-instance outcomes.
+- 0:58–2:25: benchmark improvements, timed aircraft replay, collection dwell
+  and the longest-return bottleneck.
+- 2:25–2:45: the three saved large-instance outcomes, then six proposed model
+  extensions revealed one by one on an illustrative map overlay.
 
 Pause, restart, seek, jump to chapters, loop, fast-forward at 2×, 4× or 8×, or
 use full screen. Space toggles playback, arrows seek ten seconds, 1/2/4/8 set
@@ -83,11 +85,14 @@ five or select a schedule row in chapter six to inspect another route.
 
 This is a deterministic browser replay of recorded solver evidence, with timed
 captions and no audio track, not a video file or a live solve. The final chapter
-shows simulator runtime, remaining separation warnings and the greedy fallback
-case. The assignment-space count excludes route ordering and timing. Distance is
+shows the greedy fallback case and proposes endurance, wind and weather,
+restricted airspace and threats, time windows, in-plan deconfliction and dynamic
+retasking. These overlays are illustrative and not part of the recorded run,
+except the take-off clashes, which are plotted from the saved separation warnings.
+Click an extension to focus it. The assignment-space count excludes route ordering and timing. Distance is
 shown in the scenario's abstract units. No optimality or hardware claim is made.
 
-`npm run test:demonstrator` checks the timing, saved evidence and route interpolation.
+`npm run test:demonstrator` checks the timing, saved evidence, route interpolation and roadmap reveal.
 
 ## Map surface
 

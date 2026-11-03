@@ -32,8 +32,14 @@ export type Plan = {
   metadata: Record<string, unknown>;
 };
 
+export type Conflict = {
+  time_of_closest_approach: number; uav_a: string; uav_b: string;
+  segment_a: { start: Waypoint; end: Waypoint; start_time: number; end_time: number; from_id: string; to_id: string };
+};
+
 export type Validation = {
   feasible: boolean;
+  conflicts?: Conflict[];
   issues: Array<{ code: string; message: string; severity: string }>;
   metrics: { makespan: number; total_travel_distance: number; total_flight_time: number; number_of_conflicts: number; minimum_separation: number | null; uav_utilisation: Record<string, number> };
 };

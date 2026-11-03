@@ -2,6 +2,10 @@ import type { MissionInstance, Route } from "./types";
 
 export const DEMO_DURATION = 165;
 export const PLAYBACK_SPEEDS = [1, 2, 4, 8] as const;
+// The closing chapter reveals one proposed model extension every ROADMAP_STEP seconds.
+export const ROADMAP_START = 146;
+export const ROADMAP_STEP = 3;
+export const ROADMAP_SETTLED = 164;
 export const DEMO_CHAPTERS = [
   { start: 0, end: 18, label: "The mission", title: "300 tasks. One coordinated mission." },
   { start: 18, end: 38, label: "The search space", title: "Every assignment changes the mission." },
@@ -9,7 +13,7 @@ export const DEMO_CHAPTERS = [
   { start: 58, end: 88, label: "The result", title: "Less travel. An earlier finish." },
   { start: 88, end: 119, label: "Follow one UAV", title: "Watch the route that sets the finish." },
   { start: 119, end: 145, label: "The bottleneck", title: "The mission ends with the last aircraft." },
-  { start: 145, end: DEMO_DURATION, label: "The evidence", title: "A measured improvement, with clear limits." },
+  { start: 145, end: DEMO_DURATION, label: "What's next", title: "Measured today. More realistic next." },
 ] as const;
 
 export function chapterAt(seconds: number) {
@@ -57,4 +61,25 @@ export function missionTimeAt(seconds: number, end: number, selectedEnd: number)
 
 export function clockLabel(seconds: number) {
   return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
+}
+
+export function roadmapStepAt(seconds: number, count: number) {
+  if (seconds < ROADMAP_START) return -1;
+  return Math.min(count - 1, Math.floor((seconds - ROADMAP_START) / ROADMAP_STEP));
+}
+
+export function conflictSites(instance: MissionInstance) {
+  const sites = new Map<string, { x: number; y: number; count: number; atLaunch: boolean }>();
+  for (const conflict of instance.validation.conflicts ?? []) {
+    const segment = conflict.segment_a;
+    const fraction = Math.max(0, Math.min(1, (conflict.time_of_closest_approach - segment.start_time) / Math.max(Number.EPSILON, segment.end_time - segment.start_time)));
+    const x = segment.start.x + fraction * (segment.end.x - segment.start.x);
+    const y = segment.start.y + fraction * (segment.end.y - segment.start.y);
+    const atLaunch = conflict.time_of_closest_approach === 0 && segment.from_id.startsWith("BASE_");
+    const key = `${Math.round(x)}:${Math.round(y)}`;
+    const site = sites.get(key) ?? { x, y, count: 0, atLaunch };
+    site.count += 1;
+    sites.set(key, site);
+  }
+  return Array.from(sites.values());
 }

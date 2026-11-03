@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { advancePlayback, chapterAt, clockLabel, DEMO_CHAPTERS, DEMO_DURATION, missionTimeAt, PLAYBACK_SPEEDS, positionAt, summariseInstance } from "../src/lib/demonstrator.ts";
+import { advancePlayback, chapterAt, clockLabel, conflictSites, DEMO_CHAPTERS, DEMO_DURATION, missionTimeAt, PLAYBACK_SPEEDS, positionAt, ROADMAP_SETTLED, ROADMAP_START, ROADMAP_STEP, roadmapStepAt, summariseInstance } from "../src/lib/demonstrator.ts";
 
 const evidence = JSON.parse(await readFile(new URL("../public/recorded/mission-evidence.json", import.meta.url), "utf8"));
 const instance = evidence.scales.large.instances.find(item => item.seed === 42);
@@ -87,12 +87,28 @@ test("mission replay reaches completion before each chapter transitions", () => 
   assert.ok(summary.active.every(route => route.scheduled_tasks.every(task => task.finish_time <= end)));
 });
 
-test("closing comparison preserves fallback and measured runtime evidence", () => {
+test("closing comparison preserves the greedy fallback case", () => {
   const large = evidence.scales.large.instances;
   assert.equal(large.filter(item => item.benchmarks.orbit_hybrid.makespan < item.benchmarks.greedy.makespan).length, 2);
   const fallback = large.find(item => item.seed === 2026);
   assert.equal(fallback.plan.metadata.greedy_fallback_used, true);
   assert.equal(fallback.benchmarks.orbit_hybrid.makespan, fallback.benchmarks.greedy.makespan);
-  assert.ok(instance.benchmarks.orbit_hybrid.runtime_seconds > instance.benchmarks.greedy.runtime_seconds);
   assert.equal(instance.plan.mission_end_time, instance.benchmarks.orbit_hybrid.makespan);
+});
+
+test("the closing roadmap reveals all six extensions before the story ends", () => {
+  assert.equal(roadmapStepAt(ROADMAP_START - .01, 6), -1);
+  assert.equal(roadmapStepAt(ROADMAP_START, 6), 0);
+  assert.equal(roadmapStepAt(ROADMAP_START + ROADMAP_STEP * 5, 6), 5);
+  assert.equal(roadmapStepAt(DEMO_DURATION, 6), 5);
+  assert.ok(ROADMAP_START >= DEMO_CHAPTERS[6].start);
+  assert.ok(ROADMAP_START + ROADMAP_STEP * 5 < ROADMAP_SETTLED && ROADMAP_SETTLED < DEMO_DURATION);
+});
+
+test("separation warnings are located from the saved conflicts", () => {
+  const sites = conflictSites(instance);
+  assert.equal(sites.reduce((sum, site) => sum + site.count, 0), instance.validation.metrics.number_of_conflicts);
+  const launches = sites.filter(site => site.atLaunch);
+  assert.equal(launches.reduce((sum, site) => sum + site.count, 0), 41);
+  for (const site of launches) assert.ok(instance.scenario.bases.some(base => Math.hypot(base.location.x - site.x, base.location.y - site.y) < 1e-6));
 });

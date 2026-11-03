@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import { AmbientNetwork } from "./AmbientNetwork";
 import { BrandMark } from "./BrandMark";
 import { FullscreenButton } from "./FullscreenButton";
-import { advancePlayback, chapterAt, clockLabel, DEMO_CHAPTERS, DEMO_DURATION, missionTimeAt, PLAYBACK_SPEEDS, positionAt, summariseInstance } from "@/lib/demonstrator";
+import { advancePlayback, chapterAt, clockLabel, conflictSites, DEMO_CHAPTERS, DEMO_DURATION, missionTimeAt, PLAYBACK_SPEEDS, positionAt, ROADMAP_SETTLED, ROADMAP_START, ROADMAP_STEP, roadmapStepAt, summariseInstance } from "@/lib/demonstrator";
 import type { MissionInstance, Route } from "@/lib/types";
 
 type Comparison = { seed: number; benchmarks: MissionInstance["benchmarks"]; fallback: boolean };
@@ -59,6 +59,74 @@ function MissionReplay({ instance, chapter, missionTime, selected }: { instance:
   </div>;
 }
 
+const realism = [
+  { color: "#7dded0", title: "Endurance & refuelling", text: "Cap each sortie by fuel or battery; plan refuel and relaunch.", partly: "The validator can already check a maximum mission duration." },
+  { color: "#b6abff", title: "Wind & weather", text: "Heading-dependent speed; cloud blinds EO but not SAR." },
+  { color: "#e5716f", title: "No-fly zones & threats", text: "Restricted airspace and threat rings that routes must avoid." },
+  { color: "#ffc400", title: "Time windows & priorities", text: "Collect while targets are active; serve urgent tasks first.", partly: "Earliest start times are already honoured by the scheduler." },
+  { color: "#ff9a6b", title: "Deconfliction in the plan", text: "" },
+  { color: "#f2ffff", title: "Dynamic retasking", text: "Pop-up targets and replanning while aircraft are airborne." },
+] as const;
+
+// Illustrative geometry in SVG coordinates (y down) over the 600 × 600 operating area.
+const noFlyZone = "360,290 450,268 492,330 462,402 380,412 338,352";
+const threat = { x: 205, y: 430 };
+const cloud = { x: 300, y: 112, r: 78 };
+const popUp = { x: 300, y: 232 };
+const clockTargets = [[440, 492], [505, 522], [468, 562], [392, 548]];
+
+function layerState(index: number, step: number, settled: boolean) {
+  return index > step ? "upcoming" : settled || index === step ? "active" : "shown";
+}
+
+function Badge({ index, x, y, label, anchor = "start" }: { index: number; x: number; y: number; label: string; anchor?: "start" | "end" }) {
+  const color = realism[index].color;
+  return <g className="roadmap-badge" transform={`translate(${x} ${y})`}><circle r="12" fill="#000" stroke={color} strokeWidth="2"/><text y="5.5" textAnchor="middle" fill={color} fontSize="15" fontWeight="600">{index + 1}</text><text x={anchor === "start" ? 19 : -19} y="5.5" textAnchor={anchor} fill={color} fontSize="16" fontWeight="600" letterSpacing=".08em" stroke="#000" strokeOpacity=".9" strokeWidth="4" paintOrder="stroke">{label}</text></g>;
+}
+
+function RealismRoadmap({ instance, comparisons, step, settled }: { instance: MissionInstance; comparisons: Comparison[]; step: number; settled: boolean }) {
+  const { scenario, plan } = instance;
+  const { width, height } = scenario.operating_area;
+  const sites = useMemo(() => conflictSites(instance), [instance]);
+  const base = scenario.bases[0].location;
+  const cloudedEo = scenario.tasks.filter(task => task.required_sensor === "EO" && Math.hypot(task.location.x - cloud.x, height - task.location.y - cloud.y) < cloud.r);
+  const windowed = clockTargets.map(([x, y]) => scenario.tasks.reduce((best, task) => Math.hypot(task.location.x - x, height - task.location.y - y) < Math.hypot(best.location.x - x, height - best.location.y - y) ? task : best));
+  const state = (index: number) => layerState(index, step, settled);
+  return <div className="demo-roadmap-panel">
+    <div className="demo-panel-top"><span>Proposed extensions · illustrative</span><span>Not in this recorded run</span></div>
+    <div className="demo-map-surface">
+      <svg viewBox={`-25 -25 ${width + 50} ${height + 50}`} role="img" aria-label="Recorded mission area with illustrative overlays for six proposed model extensions">
+        <defs>
+          <pattern id="demo-roadmap-grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 H 0 V 60" fill="none" stroke="#bcecec" strokeOpacity=".08" strokeWidth=".6"/></pattern>
+          <pattern id="demo-nfz-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#e5716f" strokeWidth="3" strokeOpacity=".55"/></pattern>
+          <radialGradient id="demo-cloud"><stop offset="0" stopColor="#e9e6ff" stopOpacity=".42"/><stop offset=".7" stopColor="#b6abff" stopOpacity=".16"/><stop offset="1" stopColor="#b6abff" stopOpacity="0"/></radialGradient>
+          <marker id="demo-wind-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#b6abff"/></marker>
+          <clipPath id="demo-roadmap-area"><rect width={width} height={height}/></clipPath>
+        </defs>
+        <rect width={width} height={height} fill="url(#demo-roadmap-grid)" stroke="#bcecec" strokeOpacity=".24"/>
+        <g opacity=".22">{plan.uav_routes.flatMap(route => route.trajectory_segments.map((segment, index) => <line key={`${route.uav_id}-${index}`} x1={segment.start.x} y1={height - segment.start.y} x2={segment.end.x} y2={height - segment.end.y} stroke="#89c2d9" strokeWidth="1" vectorEffect="non-scaling-stroke"/>))}</g>
+        <g opacity=".55">{scenario.tasks.map(task => <circle key={task.id} cx={task.location.x} cy={height - task.location.y} r="2.4" fill="#06131f" stroke={sensorColors[task.required_sensor] ?? "#fff"} strokeWidth="1"/>)}</g>
+        {scenario.bases.map(item => <rect key={item.id} x={item.location.x - 6} y={height - item.location.y - 6} width="12" height="12" fill="#bcecec" stroke="#000" strokeWidth="2"/>)}
+        <g clipPath="url(#demo-roadmap-area)">
+          <g className="roadmap-layer" data-state={state(0)}><circle cx={base.x} cy={height - base.y} r="235" fill="rgba(125,222,208,.05)" stroke="#7dded0" strokeWidth="2" strokeDasharray="10 8"/><circle cx={base.x} cy={height - base.y} r="150" fill="none" stroke="#7dded0" strokeOpacity=".5" strokeDasharray="3 7"/></g>
+          <g className="roadmap-layer" data-state={state(1)}>{[0, 1, 2, 3].map(row => <path key={row} className="roadmap-wind" d={`M ${120 + row * 18} ${52 + row * 34} q 70 -18 140 0 t 140 0`} fill="none" stroke="#b6abff" strokeWidth="2" markerEnd="url(#demo-wind-head)"/>)}<circle cx={cloud.x} cy={cloud.y} r={cloud.r} fill="url(#demo-cloud)"/><circle cx={cloud.x - 34} cy={cloud.y + 10} r={cloud.r * .62} fill="url(#demo-cloud)"/><circle cx={cloud.x + 38} cy={cloud.y + 14} r={cloud.r * .55} fill="url(#demo-cloud)"/>{cloudedEo.map(task => <path key={task.id} d={`M ${task.location.x - 5} ${height - task.location.y - 5} l 10 10 m 0 -10 l -10 10`} stroke="#e9e6ff" strokeWidth="2"/>)}</g>
+          <g className="roadmap-layer" data-state={state(2)}><polygon points={noFlyZone} fill="url(#demo-nfz-hatch)" stroke="#e5716f" strokeWidth="2"/>{[34, 62, 90].map((r, index) => <circle key={r} cx={threat.x} cy={threat.y} r={r} fill={index === 0 ? "rgba(229,113,111,.12)" : "none"} stroke="#e5716f" strokeOpacity={.9 - index * .25} strokeWidth="1.6"/>)}<circle className="roadmap-pulse" cx={threat.x} cy={threat.y} r="34" fill="none" stroke="#e5716f" strokeWidth="2"/><path d={`M ${threat.x} ${threat.y - 9} l 8 14 h -16 z`} fill="#e5716f"/></g>
+          <g className="roadmap-layer" data-state={state(3)}>{windowed.map((task, index) => <g key={task.id} transform={`translate(${task.location.x} ${height - task.location.y})`}><circle r="11" fill="#000" stroke="#ffc400" strokeOpacity=".5" strokeWidth="1.5"/><path d={`M 0 0 L 0 -11 A 11 11 0 0 1 ${11 * Math.sin(1 + index * .5)} ${-11 * Math.cos(1 + index * .5)} Z`} fill="#ffc400" opacity=".75"/><line x1="0" y1="0" x2="5" y2="3" stroke="#fff" strokeWidth="1.5"/></g>)}</g>
+          <g className="roadmap-layer" data-state={state(4)}>{sites.map(site => <g key={`${site.x}-${site.y}`} transform={`translate(${site.x} ${height - site.y})`}><circle className="roadmap-pulse" r={10 + site.count * 1.4} fill="none" stroke="#ff9a6b" strokeWidth="2"/><circle r={8 + site.count * 1.4} fill="rgba(255,154,107,.18)" stroke="#ff9a6b" strokeWidth="1.5"/>{site.count > 1 && <text x={site.x > width / 2 ? -22 - site.count : 22 + site.count} y="6" textAnchor={site.x > width / 2 ? "end" : "start"} fill="#ffb995" fontSize="17" fontWeight="600" stroke="#000" strokeWidth="4" paintOrder="stroke">×{site.count}</text>}</g>)}</g>
+          <g className="roadmap-layer" data-state={state(5)}><path className="roadmap-reroute" d={`M 205 268 C 232 236, 258 262, ${popUp.x - 15} ${popUp.y + 2}`} fill="none" stroke="#f2ffff" strokeWidth="2.2" strokeDasharray="7 6"/><path d="M 205 261 L 210.5 273.5 L 205 270.8 L 199.5 273.5 Z" fill="#f2ffff" stroke="#000" strokeWidth=".8" transform="rotate(40 205 268)"/><circle className="roadmap-pulse" cx={popUp.x} cy={popUp.y} r="16" fill="none" stroke="#f2ffff" strokeWidth="2"/><path d={`M ${popUp.x} ${popUp.y - 10} L ${popUp.x + 3} ${popUp.y - 3} L ${popUp.x + 10} ${popUp.y - 3} L ${popUp.x + 4.5} ${popUp.y + 2} L ${popUp.x + 6.5} ${popUp.y + 9.5} L ${popUp.x} ${popUp.y + 5} L ${popUp.x - 6.5} ${popUp.y + 9.5} L ${popUp.x - 4.5} ${popUp.y + 2} L ${popUp.x - 10} ${popUp.y - 3} L ${popUp.x - 3} ${popUp.y - 3} Z`} fill="#f2ffff"/></g>
+        </g>
+        <g className="roadmap-layer" data-state={state(0)}><Badge index={0} x={122} y={584} label="ENDURANCE"/></g>
+        <g className="roadmap-layer" data-state={state(1)}><Badge index={1} x={cloud.x + 92} y={cloud.y - 58} label="WIND · CLOUD"/></g>
+        <g className="roadmap-layer" data-state={state(2)}><Badge index={2} x={330} y={292} label="NO-FLY" anchor="end"/><Badge index={2} x={threat.x + 72} y={threat.y + 78} label="THREAT"/></g>
+        <g className="roadmap-layer" data-state={state(3)}><Badge index={3} x={400} y={600} label="TIME WINDOWS"/></g>
+        <g className="roadmap-layer" data-state={state(4)}><Badge index={4} x={92} y={222} label="TAKE-OFF CLASH"/></g>
+        <g className="roadmap-layer" data-state={state(5)}><Badge index={5} x={popUp.x + 20} y={popUp.y - 28} label="POP-UP TARGET"/></g>
+      </svg>
+    </div>
+    <div className="demo-case-strip">{comparisons.map(item => <div key={item.seed}><span>Scenario {item.seed}</span><strong>{format(item.benchmarks.greedy.makespan)} → {format(item.benchmarks.orbit_hybrid.makespan)} <small>min</small></strong><b className={item.fallback ? "fallback" : ""}>{item.fallback ? "Greedy retained" : `${format(100 * (1 - item.benchmarks.orbit_hybrid.makespan / item.benchmarks.greedy.makespan))}% earlier`}</b></div>)}</div>
+  </div>;
+}
+
 function FleetSchedule({ instance, active, selected, onSelect }: { instance: MissionInstance; active: Route[]; selected: string; onSelect: (id: string) => void }) {
   const end = instance.plan.mission_end_time;
   return <div className="demo-schedule">
@@ -85,6 +153,9 @@ export function RecordedDemonstrator({ instance, comparisons }: { instance: Miss
   const hybrid = benchmarks.orbit_hybrid;
   const missionTime = missionTimeAt(playback.seconds, plan.mission_end_time, selected.return_time);
   const service = selected.scheduled_tasks.reduce((sum, task) => sum + task.finish_time - task.start_time, 0);
+  const roadmapStep = roadmapStepAt(playback.seconds, realism.length);
+  const roadmapSettled = playback.seconds >= ROADMAP_SETTLED;
+  const launchClashes = useMemo(() => conflictSites(instance).filter(site => site.atLaunch).reduce((sum, site) => sum + site.count, 0), [instance]);
 
   useEffect(() => {
     if (!playback.playing) return;
@@ -136,7 +207,8 @@ export function RecordedDemonstrator({ instance, comparisons }: { instance: Miss
     [130, `${format(summary.distanceReduction)}% less distance, but ${format(summary.makespanReduction)}% less mission time. Collection dwell and the longest route still matter.`],
     [138, "Every aircraft need not fly. This plan leaves spare aircraft, without claiming a minimum fleet size."],
     [145, "Two of three scenarios improve on greedy. The third retains the greedy plan. No global optimum is claimed."],
-    [155, `The solve took ${format(hybrid.runtime_seconds)} seconds. ${validation.metrics.number_of_conflicts} separation warnings remain; separation is checked after planning.`],
+    [149, "Next, bring the model closer to a real mission: endurance, wind and weather, restricted airspace and target time windows."],
+    [157, `Move separation into the plan itself: ${launchClashes} of ${validation.metrics.number_of_conflicts} recorded warnings are aircraft taking off together. Then replan in flight.`],
   ];
   const caption = captions.findLast(([start]) => playback.seconds >= start)![1];
 
@@ -146,11 +218,7 @@ export function RecordedDemonstrator({ instance, comparisons }: { instance: Miss
     <div className="demo-body">
       <header className="demo-heading"><h1 key={chapter}>{scene.title}</h1></header>
       <div className="demo-stage">
-        {chapter < 5 ? <MissionReplay instance={instance} chapter={chapter} missionTime={missionTime} selected={selected}/> : chapter === 5 ? <FleetSchedule instance={instance} active={summary.active} selected={selectedId} onSelect={id => { setSelectedId(id); setPlayback(state => ({ ...state, playing: false })); }}/> : <div className="demo-evidence-panel">
-          <div className="demo-panel-top"><span>Three recorded scenarios</span><span>Lower makespan is better</span></div>
-          <div className="demo-case-table"><div className="demo-case-head"><span>Scenario seed</span><span>Greedy</span><span>Hybrid</span><span>Outcome</span></div>{comparisons.map(item => <div className="demo-case" key={item.seed}><strong>{item.seed}</strong><span>{format(item.benchmarks.greedy.makespan)} <small>min</small></span><span>{format(item.benchmarks.orbit_hybrid.makespan)} <small>min</small></span><b>{item.fallback ? "Greedy retained" : `${format(100 * (1 - item.benchmarks.orbit_hybrid.makespan / item.benchmarks.greedy.makespan))}% earlier`}</b></div>)}</div>
-          <div className="demo-closing"><h2>One plan. Every task accounted for.</h2><Link href="/">Explore the results →</Link></div>
-        </div>}
+        {chapter < 5 ? <MissionReplay instance={instance} chapter={chapter} missionTime={missionTime} selected={selected}/> : chapter === 5 ? <FleetSchedule instance={instance} active={summary.active} selected={selectedId} onSelect={id => { setSelectedId(id); setPlayback(state => ({ ...state, playing: false })); }}/> : <RealismRoadmap instance={instance} comparisons={comparisons} step={roadmapStep} settled={roadmapSettled}/>}
         <aside className="demo-insight" key={chapter}>
           {chapter === 0 && <><h2>Who collects what,<br/>and in which order?</h2><div className="demo-facts"><div><strong>{scenario.tasks.length}</strong><span>collection tasks</span></div><div><strong>{scenario.uavs.length}</strong><span>UAVs</span></div><div><strong>{scenario.bases.length}</strong><span>home bases</span></div></div><div className="demo-callout">Objective <strong>Minimise the latest return time</strong></div></>}
           {chapter === 1 && <><div className="demo-kicker">SENSOR-COMPATIBLE ASSIGNMENTS</div><div className="demo-big-number">{summary.coefficient} × 10<sup>{summary.exponent}</sup></div><p>Possible assignments with exactly one eligible UAV per task.</p><div className="demo-space-detail"><strong>{format(summary.variables, 0)}</strong><span>binary assignment variables</span></div><p className="demo-small">Before route order and timing. The solver samples and refines this space.</p></>}
@@ -158,7 +226,10 @@ export function RecordedDemonstrator({ instance, comparisons }: { instance: Miss
           {chapter === 3 && <><CompareBars title="Total travel distance" unit="units" greedy={greedy.total_distance} hybrid={hybrid.total_distance} reduction={summary.distanceReduction}/><CompareBars title="Mission makespan" unit="min" greedy={greedy.makespan} hybrid={hybrid.makespan} reduction={summary.makespanReduction}/><div className="demo-result-stat"><strong>{format(greedy.makespan - hybrid.makespan)} min</strong><span>earlier mission completion</span></div></>}
           {chapter === 4 && <><label className="demo-aircraft-select">Aircraft <select value={selectedId} onChange={event => { setSelectedId(event.target.value); setPlayback({ seconds: 88, playing: false }); }}>{summary.active.map(route => <option key={route.uav_id} value={route.uav_id}>{route.uav_id} · {format(route.return_time)} min</option>)}</select></label><div className="demo-route-facts"><div><strong>{selected.scheduled_tasks.length}</strong><span>collection tasks</span></div><div><strong>{format(selected.return_time)} <small>min</small></strong><span>return to home base</span></div></div><div className="demo-duration-strip"><i style={{ width: `${service / selected.return_time * 100}%` }}/></div><div className="demo-duration-labels"><span>{format(service)} min collecting</span><span>{format(selected.return_time - service)} min travel / other</span></div><div className="demo-callout">Watch the pauses <strong>Collection time is real work in the schedule.</strong></div></>}
           {chapter === 5 && <><h2>Shorter routes help.<br/>The longest still decides.</h2><div className="demo-finish-times">{summary.active.slice(0, 3).map(route => <div key={route.uav_id}><span>{route.uav_id}</span><strong>{format(route.return_time, 2)} <small>min</small></strong></div>)}</div><p>The three latest returns are within {format((summary.active[0].return_time - summary.active[2].return_time) * 60)} seconds of one another.</p><div className="demo-callout">{summary.active.length} active / {scenario.uavs.length - summary.active.length} unassigned<strong>All {plan.task_assignments.length} tasks covered by this plan.</strong></div><button className="demo-route-button" onClick={() => setPlayback({ seconds: 88, playing: true })}>Replay {selectedId} →</button></>}
-          {chapter === 6 && <><div className="demo-runtime"><strong>{format(hybrid.runtime_seconds)} <small>s</small></strong><span>hybrid solve time</span><p>Greedy: {format(greedy.runtime_seconds * 1000)} ms. Better mission quality, with more computation.</p></div><div className="demo-warning"><strong>{validation.metrics.number_of_conflicts} spatial warnings</strong><p>Assignment validation: {validation.feasible ? "passed" : "failed"}. Separation is reported after solving and is not an optimisation constraint.</p></div><p className="demo-small">Software simulation, not hardware. Sampler seed not applied.</p></>}
+          {chapter === 6 && <><h2>What we could add next</h2><ol className="demo-roadmap">{realism.map((item, index) => {
+            const itemState = layerState(index, roadmapStep, roadmapSettled);
+            return <li key={item.title}><button data-state={itemState} aria-current={itemState === "active" && !roadmapSettled ? "step" : undefined} style={{ "--c": item.color } as CSSProperties} onClick={() => setPlayback({ seconds: ROADMAP_START + index * ROADMAP_STEP + .01, playing: false })}><span>{index + 1}</span><div><strong>{item.title}{"partly" in item && <em title={item.partly}>Partly in place</em>}</strong><p>{item.text || `${launchClashes} of ${validation.metrics.number_of_conflicts} separation warnings are aircraft taking off together.`}</p></div></button></li>;
+          })}</ol></>}
         </aside>
       </div>
       <div className="demo-caption" aria-live="off"><p>{caption}</p></div>
